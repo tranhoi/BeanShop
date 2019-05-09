@@ -1,0 +1,492 @@
+C:\Visual Projects\BeanStore\BeanStore\bin\ApplicationInsights.config
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\csc.exe
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\vbc.exe
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\VBCSCompiler.exe
+C:\Visual Projects\BeanStore\BeanStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Visual Projects\BeanStore\BeanStore\bin\BeanStore.dll.config
+C:\Visual Projects\BeanStore\BeanStore\bin\BeanStore.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\BeanStore.pdb
+C:\Visual Projects\BeanStore\BeanStore\bin\Antlr3.Runtime.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\EntityFramework.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\EntityFramework.SqlServer.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.Web.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.ApplicationInsights.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Newtonsoft.Json.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Owin.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Helpers.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Mvc.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Optimization.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Razor.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.WebPages.Deployment.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.WebPages.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.WebPages.Razor.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\WebGrease.dll
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.Web.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.ApplicationInsights.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Helpers.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Mvc.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Optimization.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.Razor.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.WebPages.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.WebPages.Deployment.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\System.Web.WebPages.Razor.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Antlr3.Runtime.pdb
+C:\Visual Projects\BeanStore\BeanStore\bin\Newtonsoft.Json.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\EntityFramework.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\EntityFramework.SqlServer.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Visual Projects\BeanStore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Visual Projects\BeanStore\BeanStore\obj\Debug\BeanStore.csprojResolveAssemblyReference.cache
+C:\Visual Projects\BeanStore\BeanStore\obj\Debug\BeanStore.dll
+C:\Visual Projects\BeanStore\BeanStore\obj\Debug\BeanStore.pdb
+D:\DACS\BeanStore\BeanStore\bin\ApplicationInsights.config
+D:\DACS\BeanStore\BeanStore\bin\roslyn\csc.exe
+D:\DACS\BeanStore\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DACS\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DACS\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DACS\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DACS\BeanStore\BeanStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DACS\BeanStore\BeanStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DACS\BeanStore\BeanStore\bin\roslyn\System.Collections.Immutable.dll
+D:\DACS\BeanStore\BeanStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\DACS\BeanStore\BeanStore\bin\roslyn\vbc.exe
+D:\DACS\BeanStore\BeanStore\bin\roslyn\VBCSCompiler.exe
+D:\DACS\BeanStore\BeanStore\bin\roslyn\VBCSCompiler.exe.config
+D:\DACS\BeanStore\BeanStore\bin\BeanStore.dll.config
+D:\DACS\BeanStore\BeanStore\bin\BeanStore.dll
+D:\DACS\BeanStore\BeanStore\bin\BeanStore.pdb
+D:\DACS\BeanStore\BeanStore\bin\Antlr3.Runtime.dll
+D:\DACS\BeanStore\BeanStore\bin\EntityFramework.dll
+D:\DACS\BeanStore\BeanStore\bin\EntityFramework.SqlServer.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.Agent.Intercept.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.DependencyCollector.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.Web.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.WindowsServer.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.ApplicationInsights.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Google.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Web.Infrastructure.dll
+D:\DACS\BeanStore\BeanStore\bin\Newtonsoft.Json.dll
+D:\DACS\BeanStore\BeanStore\bin\Owin.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Helpers.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Mvc.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Optimization.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Razor.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.WebPages.Deployment.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.WebPages.dll
+D:\DACS\BeanStore\BeanStore\bin\System.Web.WebPages.Razor.dll
+D:\DACS\BeanStore\BeanStore\bin\WebGrease.dll
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.DependencyCollector.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.Web.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AI.WindowsServer.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.ApplicationInsights.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Helpers.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Mvc.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Optimization.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.Razor.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.WebPages.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.WebPages.Deployment.xml
+D:\DACS\BeanStore\BeanStore\bin\System.Web.WebPages.Razor.xml
+D:\DACS\BeanStore\BeanStore\bin\Antlr3.Runtime.pdb
+D:\DACS\BeanStore\BeanStore\bin\Newtonsoft.Json.xml
+D:\DACS\BeanStore\BeanStore\bin\EntityFramework.xml
+D:\DACS\BeanStore\BeanStore\bin\EntityFramework.SqlServer.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Google.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DACS\BeanStore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DACS\BeanStore\BeanStore\obj\Debug\BeanStore.dll
+D:\DACS\BeanStore\BeanStore\obj\Debug\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\ApplicationInsights.config
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\csc.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\vbc.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\BeanStore.dll.config
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\BeanStore.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Antlr3.Runtime.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\EntityFramework.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\EntityFramework.SqlServer.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.Web.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Newtonsoft.Json.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Helpers.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Mvc.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Optimization.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Razor.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.WebPages.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\WebGrease.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.Web.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Helpers.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Mvc.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Optimization.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.Razor.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.WebPages.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Antlr3.Runtime.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Newtonsoft.Json.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\EntityFramework.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\EntityFramework.SqlServer.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\obj\Debug\BeanStore.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\obj\Debug\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\ApplicationInsights.config
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\csc.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\vbc.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\BeanStore.dll.config
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\BeanStore.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Antlr3.Runtime.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\EntityFramework.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\EntityFramework.SqlServer.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.Web.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Newtonsoft.Json.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Helpers.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Mvc.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Optimization.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Razor.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.WebPages.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\WebGrease.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.Web.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Helpers.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Mvc.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Optimization.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.Razor.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.WebPages.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Antlr3.Runtime.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Newtonsoft.Json.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\EntityFramework.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\EntityFramework.SqlServer.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\obj\Debug\BeanStore.csprojResolveAssemblyReference.cache
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\obj\Debug\BeanStore.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanStore\BeanStore\obj\Debug\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\ApplicationInsights.config
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\csc.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\vbc.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\BeanStore.dll.config
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\BeanStore.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Antlr3.Runtime.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\EntityFramework.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\EntityFramework.SqlServer.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.Web.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Newtonsoft.Json.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Owin.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Helpers.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Mvc.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Optimization.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Razor.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.WebPages.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\WebGrease.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.Web.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Helpers.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Mvc.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Optimization.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.Razor.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.WebPages.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Antlr3.Runtime.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Newtonsoft.Json.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\EntityFramework.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\EntityFramework.SqlServer.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.csprojResolveAssemblyReference.cache
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\ApplicationInsights.config
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\csc.exe
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\vbc.exe
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\BeanStore.dll.config
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\BeanStore.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\BeanStore.pdb
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Antlr3.Runtime.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\EntityFramework.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\EntityFramework.SqlServer.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.Web.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Newtonsoft.Json.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Owin.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Helpers.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Mvc.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Optimization.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Razor.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.WebPages.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\WebGrease.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.Web.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Helpers.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Mvc.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Optimization.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.Razor.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.WebPages.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Antlr3.Runtime.pdb
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Newtonsoft.Json.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\EntityFramework.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\EntityFramework.SqlServer.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\tranh\Desktop\Beanstore\BeanStore\obj\Debug\BeanStore.csprojAssemblyReference.cache
+C:\Users\tranh\Desktop\Beanstore\BeanStore\obj\Debug\BeanStore.csproj.CoreCompileInputs.cache
+C:\Users\tranh\Desktop\Beanstore\BeanStore\obj\Debug\BeanStore.csproj.CopyComplete
+C:\Users\tranh\Desktop\Beanstore\BeanStore\obj\Debug\BeanStore.dll
+C:\Users\tranh\Desktop\Beanstore\BeanStore\obj\Debug\BeanStore.pdb

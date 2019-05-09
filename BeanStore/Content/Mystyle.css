@@ -1,0 +1,9 @@
+﻿body {
+}
+.footer-logo .logo > img {
+    max-height: 100px;
+}
+.input {
+    padding-left: 20px;
+        max-width: 1000px;
+}

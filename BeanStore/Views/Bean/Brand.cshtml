@@ -1,0 +1,6 @@
+﻿@foreach (var item in Model)
+{
+    <a href="@Url.Action("Items_Brand", "Bean", new { id = item.id})">
+        @item.name
+    </a>
+}
