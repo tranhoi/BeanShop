@@ -1,4 +1,6 @@
-﻿
+﻿@using BeanStore.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<item>
 @{
     ViewBag.Title = "Item_All";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
@@ -29,7 +31,7 @@
                                     <span class="sale">-@items.sale%</span>
                                 }
                             </div>
-                            <a href="@Url.Action("Details", "Bean", new { id = items.id})">
+                            <a href="@Url.Action("Details", "Bean", new { id = items.id })">
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
                             </a>
                             <img alt="@items.name" src="/images_product/@items.image_link" height="280">
@@ -56,6 +58,21 @@
             }
         </div>
         <!-- /row -->
+        <div id="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb">
+                    @if (Model.PageCount <= 1)
+                    {
+                        <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
+                    }
+                    else
+                    {
+                        <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
+                        @Html.PagedListPager(Model, page => Url.Action("Item_All", new { page = page }))
+                    }
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- /container -->
 </div>

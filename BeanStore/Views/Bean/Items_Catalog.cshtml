@@ -1,4 +1,8 @@
-﻿@{
+﻿@using BeanStore.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<item>
+
+@{
     ViewBag.Title = "Items_Catalog";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
@@ -71,6 +75,21 @@
             }
         </div>
         <!-- /row -->
+        <div id="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb">
+                    @if (Model.PageCount <= 1)
+                    {
+                        <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
+                    }
+                    else
+                    {
+                        <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
+                        @Html.PagedListPager(Model, page => Url.Action("Items_Catalog", new { page = page }))
+                    }
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- /container -->
 </div>

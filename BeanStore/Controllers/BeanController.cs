@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using BeanStore.Models;
 
+using PagedList;
+using PagedList.Mvc;
+
 namespace BeanStore.Controllers
 {
     public class BeanController : Controller
@@ -33,10 +36,13 @@ namespace BeanStore.Controllers
             var itemsales = Gettopsale(6);
             return PartialView(itemsales);
         }
-        public ActionResult Item_All()
+        public ActionResult Item_All(int? page)
         {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+
             var item = from ite in data.items select ite;
-            return View(item);
+            return View(item.ToPagedList(pageNum, pageSize));
         }
         public ActionResult Brand()
         {
@@ -64,19 +70,26 @@ namespace BeanStore.Controllers
                          select bra;
             return PartialView(brands);
         }
-        public ActionResult Items_Brand(int id)
+        public ActionResult Items_Brand(int id, int? page)
         {
+            int pageSize = 3;
+            int pageNum = (page ?? 1);
+
             var item = from ite in data.items
                        where ite.brand_id == id
                        select ite;
-            return View(item);
+            return View(item.ToPagedList(pageNum, pageSize));
         }
-        public ActionResult Items_Catalog(int id)
+        public ActionResult Items_Catalog(int id, int? page)
         {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+
             var item = from ite in data.items
                        where ite.catalog_id == id
                        select ite;
-            return View(item);
+            ViewBag.paging = pageSize;
+            return View(item.ToPagedList(pageNum, pageSize));
         }
         public ActionResult Details(int id)
         {

@@ -10,7 +10,7 @@
             <div class="shopping-cart-list">
                 @if (ViewBag.cartempty == true)
                 {
-                    <h5>Your cart is empty! <a href="@Url.Action("Index", "Bean")"> shop now?</a></h5>
+                    <h5>Your cart is empty! <a href="@Url.Action("Item_All", "Bean")"> shop now?</a></h5>
                 }
                 @foreach (var item in Model)
                 {
