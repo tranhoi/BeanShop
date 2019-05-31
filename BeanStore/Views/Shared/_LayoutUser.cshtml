@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>E-SHOP HTML Template</title>
+    <title> Bean Shop </title>
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
     <!-- Exzoom -->
@@ -23,7 +23,9 @@
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="~/Content/style.css" />
     <!-- My stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="~/Content/Mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content_me/Mystyle.css" />
+    <!-- Contract page stlylesheet -->
+    <link href="~/Content_me/main.contract.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -68,12 +70,12 @@
                     <!-- Logo -->
                     <div class="header-logo">
                         <a href="@Url.Action("Index", "Bean")">
-                            <img src="~/images/logo.png" alt="logo" width="200" , height="65">
+                            <img src="~/images/logo.png" alt="logo" width="200" , height="80">
                         </a>
                     </div>
                     <!-- /Logo -->
                     <!-- Search -->
-                    <div class="header-search">
+                    <div class="header-search" style="width: 60%">
                         <form>
                             <input class="input search-input" type="text" placeholder="Enter your keyword">
                             <button class="search-btn"><i class="fa fa-search"></i></button>
@@ -226,8 +228,8 @@
                                 </div>
                             </div>
                         </li>
+                        <li><a href="Url.Action("About", "Bean")">About</a></li>
                         -->
-                        <li><a href="@Url.Action("About", "Bean")">About</a></li>
                         <li><a href="@Url.Action("Contact", "Bean")">Contact</a></li>
                     </ul>
                 </div>
@@ -315,5 +317,31 @@
     <script src="~/Scripts/nouislider.min.js"></script>
     <script src="~/Scripts/jquery.zoom.min.js"></script>
     <script src="~/Scripts/main.js"></script>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.3'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="2354108234832687"
+         theme_color="#F8694A"
+         logged_in_greeting="Welcome to Beanshop! How can we help you?"
+         logged_out_greeting="Welcome to Beanshop! How can we help you?">
+    </div>
 </body>
 </html>

@@ -1,0 +1,19 @@
+﻿body {
+}
+.footer-logo .logo > img {
+    max-height: 100px;
+}
+.input {
+    padding-left: 20px;
+        max-width: 1000px;
+}
+.pagination > .active > a {
+    background-color: #F8694A;
+    border-color: #F8694A;
+}
+input, select, textarea {
+    max-width: none;
+}
+.pull-left {
+    width: 800px;
+}

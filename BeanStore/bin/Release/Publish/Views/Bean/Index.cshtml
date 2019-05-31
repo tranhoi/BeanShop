@@ -1,0 +1,74 @@
+﻿@using BeanStore.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+@{
+    user use = (user)Session["UserAccount"];
+}
+<!-- HOME -->
+<div id="home">
+    <!-- container -->
+    <div class="container">
+        <!-- home wrap -->
+        <div class="home-wrap">
+            <!-- home slick -->
+            <div id="home-slick">
+                <!-- banner -->
+                @Html.Action("Banner_Brand", "Bean")
+                <!-- /banner -->
+            </div>
+            <!-- /home slick -->
+        </div>
+        <!-- /home wrap -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /HOME -->
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- section-title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title">New Product</h2>
+                    <div class="pull-right">
+                        <div class="product-slick-dots-1 custom-dots"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-title -->
+            <!-- banner -->
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="banner banner-2">
+                    <img src="~/images/mensfashion-priv-closeup.jpg" />
+                    <div class="banner-caption">
+                        <h2 class="white-color">NEW<br>PRODUCT</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- /banner -->
+            <!-- Product Slick -->
+            <div class="col-md-9 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div id="product-slick-1" class="product-slick">
+                        @Html.Action("Newitem", "Bean")
+                    </div>
+                </div>
+            </div>
+            <!-- /Product Slick -->
+        </div>
+        <!-- /row -->
+        <!-- row -->
+        <div class="row">
+            @Html.Action("Topsale", "Bean")
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

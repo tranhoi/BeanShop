@@ -226,7 +226,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\jquery.exzoom.css" />
-    <Content Include="Content\Mystyle.css" />
+    <Content Include="Content_me\main.contract.css" />
+    <Content Include="Content_me\Mystyle.css" />
     <Content Include="Content\nouislider.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\slick-theme.css" />
@@ -344,6 +345,7 @@
     <Content Include="fonts\slick.eot" />
     <Content Include="fonts\slick.ttf" />
     <Content Include="fonts\slick.woff" />
+    <Content Include="Content_me\bootstrap.contract.css.map" />
     <Content Include="Models\dbBean.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>dbBean.designer.cs</LastGenOutput>
@@ -352,6 +354,8 @@
     <None Include="Models\dbBean.dbml.layout">
       <DependentUpon>dbBean.dbml</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\Beanshop.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

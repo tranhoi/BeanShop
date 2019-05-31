@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\tranh\Desktop\Bean</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="bin/BeanStore.dll">
+      <publishTime>05/31/2019 21:54:52</publishTime>
+    </File>
+    <File Include="bin/BeanStore.pdb">
+      <publishTime>05/31/2019 21:54:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/31/2019 10:37:06</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/31/2019 10:37:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>05/31/2019 10:37:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>05/31/2019 10:37:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>05/31/2019 10:37:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>05/31/2019 10:37:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>05/31/2019 10:37:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>05/31/2019 10:37:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>05/31/2019 10:37:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>05/31/2019 10:37:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/31/2019 10:37:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/31/2019 10:37:18</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/31/2019 10:37:20</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>05/31/2019 10:37:22</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>05/31/2019 10:37:22</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>05/31/2019 10:37:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/31/2019 10:37:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/31/2019 10:37:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/31/2019 10:37:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/31/2019 10:37:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/31/2019 10:37:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/31/2019 10:37:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/jquery.exzoom.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/nouislider.min.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/PagedList.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/slick-theme.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/slick.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>05/31/2019 10:36:46</publishTime>
+    </File>
+    <File Include="Content_me/bootstrap.contract.css.map">
+      <publishTime>05/31/2019 14:41:28</publishTime>
+    </File>
+    <File Include="Content_me/main.contract.css">
+      <publishTime>05/31/2019 19:20:18</publishTime>
+    </File>
+    <File Include="Content_me/Mystyle.css">
+      <publishTime>05/31/2019 17:01:16</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/slick.eot">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/slick.svg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/slick.ttf">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="fonts/slick.woff">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/31/2019 10:36:48</publishTime>
+    </File>
+    <File Include="images/banner01.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner02.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner03.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner04.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner05.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner06.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner07.jpg">
+      <publishTime>05/31/2019 10:36:58</publishTime>
+    </File>
+    <File Include="images/banner08.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner09.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner10.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner11.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner12.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner13.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner14.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/banner15.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/img_avatar2.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/main-product01.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/main-product02.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/main-product03.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/main-product04.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/mensfashion-priv-closeup.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product01.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product02.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product03.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product04.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product05.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product06.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product07.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/product08.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/thumb-product01.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/thumb-product02.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/thumb-product03.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images/thumb-product04.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/Apple-Logo-black-800x600.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/banner01.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/banner02.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/banner03.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/banner04.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/banner05.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/CommonPlasticBug-poster.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/download.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/f2-kinh-doanh-dien-thoai-va-phu-kien-2-1.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/huawei-logo.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/Huawei42-b_22.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/iPhone-%28Apple%2942-b_16.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/lenovo-yoga-tablet-3-8-hero.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/Nokia42-b_21.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/Samsung42-b_25.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/thi-truong-smartphone-1-152532608338212273564431 %281%29.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_brand/Xiaomi42-b_31.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/13d2a6a0bf0091253dbafdd6aa3a3efa_xl.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/1512844-01.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/8-gray_2_5.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/9_1_111.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/cap-micro-usb-20cm-esaver-ds026-avatar-1-600x600.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/dap-hop-galaxy-note-9-chinh-hang-hnam_6__1.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/dsc03177-153388769796190219015_1.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/galaxy-note-9-black-back_2.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/galaxy-note-9-purple-back_2.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/galaxy-note-9.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/hmd_panda_packshot_lowres_row1_27062018.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/hmd_panda_white_ari_lowres_row1_27062018_1_1.png">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/huawei-mate-x-2-600x600.jpg">
+      <publishTime>05/31/2019 10:37:00</publishTime>
+    </File>
+    <File Include="images_product/huawei-mate-x-foldable-smartphone-grey_dezeen_2364_col_6-852x862.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/huawei-mate-x-hands-on-mwc-2019-17.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/huawei-mediapad-t5-33397-hinhchitiet-400x460.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/huawei-nova-3i-trang-chipu-600x600.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/iphone-7-plus-pink_3_3_1_1.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/may-tinh-bang-ipad-pro-11-inch-256gb-wifi-2018-33397-chitiet-400x460.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/nokia-8-1-featured.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/note9-_5__1.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/poco-f1-black_2.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/polymer-10000-mah-type-c-esaver-pj-jp106s-avatar-1-600x600.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/samsung-galaxy-m20-m205f-1_1_2.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/samsung-galaxy-tab-a-105-inch-chitietblue-400x460.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/sieu-pham-galaxy-s-black-400x400_1.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/skyblue-rgb-500x500.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/tai-nghe-chup-tai-kanen-ip-2090-2-3-600x600.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/trang_2_1_3.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-9-2.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-9-6-39-inch-8gb-128gb-smartphone-gray-831513-.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-9_2-1.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-mix-3-render-based-on-leaks-1-1600x1234_1_1.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-mix-3-xanh-l_c-b_o.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-mix-3-xanh-ng_c-b_ch.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xiaomi-mi-mix-3-_en-nh_m.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xs-1_9_5_3.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xs-back_8_3.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xs-max-gold-sgmall-2sim-2_3.jpg">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="images_product/xs_8_3.png">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="Models/dbBean.dbml">
+      <publishTime>05/31/2019 21:53:06</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/31/2019 10:37:02</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.22.9-build00167.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.exzoom.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.zoom.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/nouislider.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/slick.min.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/About.cshtml">
+      <publishTime>05/31/2019 13:13:40</publishTime>
+    </File>
+    <File Include="Views/Bean/Banner_Brand.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Brand.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Brand_Item.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Catalog_Item.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Contact.cshtml">
+      <publishTime>05/31/2019 19:26:40</publishTime>
+    </File>
+    <File Include="Views/Bean/Details.cshtml">
+      <publishTime>05/31/2019 17:17:16</publishTime>
+    </File>
+    <File Include="Views/Bean/Index.cshtml">
+      <publishTime>05/31/2019 19:47:12</publishTime>
+    </File>
+    <File Include="Views/Bean/Items_brand.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Items_Catalog.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Item_All.cshtml">
+      <publishTime>05/31/2019 11:42:40</publishTime>
+    </File>
+    <File Include="Views/Bean/Newitem.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Bean/Topsale.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Cart/Cart.cshtml">
+      <publishTime>05/31/2019 16:56:48</publishTime>
+    </File>
+    <File Include="Views/Cart/CartPartial.cshtml">
+      <publishTime>05/31/2019 16:32:00</publishTime>
+    </File>
+    <File Include="Views/Cart/Order.cshtml">
+      <publishTime>05/31/2019 16:27:20</publishTime>
+    </File>
+    <File Include="Views/Cart/Order_confirmation.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/sample page/blank.html">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/sample page/checkout.html">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/sample page/contact-us.html">
+      <publishTime>05/31/2019 13:44:20</publishTime>
+    </File>
+    <File Include="Views/sample page/index.html">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/sample page/product-page.html">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/sample page/products.html">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/31/2019 10:36:50</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutUser.cshtml">
+      <publishTime>05/31/2019 19:50:42</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/User/Account.cshtml">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/User/Login.cshtml">
+      <publishTime>05/31/2019 16:35:24</publishTime>
+    </File>
+    <File Include="Views/User/Register.cshtml">
+      <publishTime>05/31/2019 16:35:58</publishTime>
+    </File>
+    <File Include="Views/User/Register_Success.cshtml">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/31/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/31/2019 21:54:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

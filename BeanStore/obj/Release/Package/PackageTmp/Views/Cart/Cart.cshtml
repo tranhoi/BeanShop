@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order-summary clearfix">
+                    <div class="section-title">
+                        <h3 class="title">Your cart</h3>
+                    </div>
+                    <table class="shopping-cart-table table">
+                        <thead>
+                            <tr>
+                                <th style="width: 8%">Product</th>
+                                <th style="width: 30%"></th>
+                                <th style="width: 8%" class="text-center">Price</th>
+                                <th style="width: 8%" class="text-center">Sale</th>
+                                <th style="width: 20%" class="text-center">Quantity</th>
+                                <th style="width: 15%" class="text-center">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td class="thumb"><img src="~/images_product/@item.cImage_link" alt=""></td>
+                                <td class="details">
+                                    <a href="#">@item.cName</a>
+                                    <ul>
+                                        <li><span>Memory version: ---</span></li>
+                                        <li><span>Color: ---</span></li>
+                                    </ul>
+                                </td>
+                                @using (Html.BeginForm("UpdateCart", "Cart", new { @cId = item.cId }))
+                                {
+                                    <td class="price text-center"><strong>$@item.cPrice</strong></td>
+                                    <td class="price text-center"><strong>@item.cSale%</strong></td>
+                                    <td class="qty text-center"><input style="height: 35px" type="number" min="1" name="txtQuantity" value="@item.cQuantity"></td>
+                                    <td class="total text-center"><strong class="primary-color">$@item.cAmount</strong></td>
+                                    <td class="text-center"></td>
+                                    <td><input class="text-right" type="submit" style="background-color: white; border: none" value="Update">@Html.ActionLink("/ Delete", "DeleteCart", new { @cId = item.cId })</td>
+                                }
+                            </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th class="empty" colspan="4"></th>
+                                <th>Total Quantity</th>
+                                <th colspan="4" class="sub-total">@ViewBag.totalQuantity</th>
+                            </tr>
+                            <tr>
+                                <th class="empty" colspan="4"></th>
+                                <th>Total Price</th>
+                                <th colspan="4" class="total">$@ViewBag.totalPrice</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="pull-right">
+                        <button class="primary-btn">@Html.ActionLink("Place Order", "Order", "Cart")</button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="primary-btn">@Html.ActionLink("Delete All", "DeleteAllCart")</button>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

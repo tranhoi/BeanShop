@@ -1,11 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BeanStore" Class="dbBeanDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLPATHEO;Initial Catalog=BeanStore;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BeanStoreConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLPATHEO;Initial Catalog=BeanStore;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BeanStoreConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin" Member="admins">
     <Type Name="admin">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="username" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
       <Column Name="password" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="user_order" Member="orders" ThisKey="id" OtherKey="user_id" Type="order" />
     </Type>
   </Table>
   <Table Name="dbo.brand" Member="brands">
@@ -23,6 +34,17 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="catalog_item" Member="items" ThisKey="id" OtherKey="catalog_id" Type="item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.det_order" Member="det_orders">
+    <Type Name="det_order">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="order_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="item_det_order" Member="item" ThisKey="item_id" OtherKey="id" Type="item" IsForeignKey="true" />
+      <Association Name="order_det_order" Member="order" ThisKey="order_id" OtherKey="id" Type="order" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.items" Member="items">
@@ -45,17 +67,6 @@
       <Association Name="catalog_item" Member="catalog" ThisKey="catalog_id" OtherKey="id" Type="catalog" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.det_order" Member="det_orders">
-    <Type Name="det_order">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="order_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="item_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Association Name="item_det_order" Member="item" ThisKey="item_id" OtherKey="id" Type="item" IsForeignKey="true" />
-      <Association Name="order_det_order" Member="order" ThisKey="order_id" OtherKey="id" Type="order" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.[order]" Member="orders">
     <Type Name="order">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -66,17 +77,6 @@
       <Column Name="total_price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Association Name="order_det_order" Member="det_orders" ThisKey="id" OtherKey="order_id" Type="det_order" />
       <Association Name="user_order" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.[user]" Member="users">
-    <Type Name="user">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-      <Column Name="email" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
-      <Column Name="address" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
-      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="user_order" Member="orders" ThisKey="id" OtherKey="user_id" Type="order" />
     </Type>
   </Table>
 </Database>

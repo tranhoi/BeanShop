@@ -1,0 +1,28 @@
+﻿@if (ViewBag.Notification == null)
+{
+    <li class="header-account dropdown default-dropdown">
+        <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+            <div class="header-btns-icon">
+                <i class="fa fa-user-o"></i>
+            </div>
+            <strong class="text-uppercase"> My acccout <i class="fa fa-caret-down"></i></strong>
+        </div>
+        <a href="@Url.Action("Login", "User")" class="text-uppercase">Login</a>
+        <ul class="custom-menu">
+            <li><a href="@Url.Action("Login", "User")"><i class="fa fa-unlock-alt"></i> Login</a></li>
+            <li><a href="@Url.Action("Register", "User")"><i class="fa fa-user-plus"></i> Create An Account</a></li>
+        </ul>
+    </li>
+}
+else
+{
+    <li class="header-account dropdown default-dropdown">
+        <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+            <div class="header-btns-icon">
+                <i class="fa fa-user-o"></i>
+            </div>
+            <strong class="text-uppercase"> @ViewBag.Notification </strong>
+        </div>
+        <a href="@Url.Action("Logout", "User")" class="text-uppercase">Logout</a>
+    </li>
+}

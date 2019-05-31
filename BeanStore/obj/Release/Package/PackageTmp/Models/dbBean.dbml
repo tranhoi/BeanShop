@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BeanStore" Class="dbBeanDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLPATHEO;Initial Catalog=BeanStore;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BeanStoreConnectionString3" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.admin" Member="admins">
+    <Type Name="admin">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="user_order" Member="orders" ThisKey="id" OtherKey="user_id" Type="order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.brand" Member="brands">
+    <Type Name="brand">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="banner_link" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="logo" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="showinbanner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="brand_item" Member="items" ThisKey="id" OtherKey="brand_id" Type="item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.catalogs" Member="catalogs">
+    <Type Name="catalog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="catalog_item" Member="items" ThisKey="id" OtherKey="catalog_id" Type="item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.det_order" Member="det_orders">
+    <Type Name="det_order">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="order_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="item_det_order" Member="item" ThisKey="item_id" OtherKey="id" Type="item" IsForeignKey="true" />
+      <Association Name="order_det_order" Member="order" ThisKey="order_id" OtherKey="id" Type="order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.items" Member="items">
+    <Type Name="item">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="brand_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="catalog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="sale" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="image_link" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="image_link2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="image_link3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="image_link4" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="image_link5" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="item_det_order" Member="det_orders" ThisKey="id" OtherKey="item_id" Type="det_order" />
+      <Association Name="brand_item" Member="brand" ThisKey="brand_id" OtherKey="id" Type="brand" IsForeignKey="true" />
+      <Association Name="catalog_item" Member="catalog" ThisKey="catalog_id" OtherKey="id" Type="catalog" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[order]" Member="orders">
+    <Type Name="order">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="order_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="delivery_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="total_price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="order_det_order" Member="det_orders" ThisKey="id" OtherKey="order_id" Type="det_order" />
+      <Association Name="user_order" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

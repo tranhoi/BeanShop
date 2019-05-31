@@ -40,7 +40,7 @@
                                 {
                                     <td class="price text-center"><strong>$@item.cPrice</strong></td>
                                     <td class="price text-center"><strong>@item.cSale%</strong></td>
-                                    <td class="qty text-center"><input type="number" min="1" name="txtQuantity" value="@item.cQuantity"></td>
+                                    <td class="qty text-center"><input style="height: 35px" type="number" min="1" name="txtQuantity" value="@item.cQuantity"></td>
                                     <td class="total text-center"><strong class="primary-color">$@item.cAmount</strong></td>
                                     <td class="text-center"></td>
                                     <td><input class="text-right" type="submit" style="background-color: white; border: none" value="Update">@Html.ActionLink("/ Delete", "DeleteCart", new { @cId = item.cId })</td>
