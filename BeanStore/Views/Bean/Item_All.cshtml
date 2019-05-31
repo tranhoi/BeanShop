@@ -45,11 +45,13 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o empty"></i>
                             </div>
-                            <h2 class="product-name"><a href="#">@items.name</a></h2>
+                            <h2 class="product-name"><a href="#">items.name</a></h2>
                             <div class="product-btns">
                                 <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                 <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                <a href="@Url.Action("AddCart", "Cart", new { @cId = items.id, @strURL = Request.Url.ToString() })">
+                                    <button onclick="alert('Added to cart')" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                </a>
                             </div>
                         </div>
                     </div>

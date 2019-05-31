@@ -372,6 +372,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\sample page\blank.html" />
     <Content Include="Views\sample page\checkout.html" />
+    <Content Include="Views\sample page\contact-us.html" />
     <Content Include="Views\sample page\index.html" />
     <Content Include="Views\sample page\product-page.html" />
     <Content Include="Views\sample page\products.html" />
@@ -408,6 +409,8 @@
     <Content Include="Views\Cart\Order_confirmation.cshtml" />
     <Content Include="Views\User\Account.cshtml" />
     <Content Include="Views\User\Register_Success.cshtml" />
+    <Content Include="Views\Bean\About.cshtml" />
+    <Content Include="Views\Bean\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

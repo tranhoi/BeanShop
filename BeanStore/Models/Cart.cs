@@ -14,10 +14,17 @@ namespace BeanStore.Models
         public string cName { set; get; }
         public string cImage_link { set; get; }
         public Double cPrice { set; get; }
+        public Double cSale { set; get; }
         public int cQuantity { set; get; }
         public Double cAmount
         {
-            get { return cQuantity * cPrice; }
+            get {
+                if(cSale != 0)
+                {
+                    return (cQuantity * cPrice) - (cPrice * (cSale/100));
+                }
+                else { return cQuantity * cPrice; }
+            }
 
         }
         //-------------
@@ -28,6 +35,7 @@ namespace BeanStore.Models
             cName = ite.name;
             cImage_link = ite.image_link;
             cPrice = double.Parse(ite.price.ToString());
+            cSale = double.Parse(ite.sale.ToString());
             cQuantity = 1;
         }
     }

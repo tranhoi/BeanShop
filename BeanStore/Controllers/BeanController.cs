@@ -98,5 +98,13 @@ namespace BeanStore.Controllers
                        select s;
             return View(item.Single());
         }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
