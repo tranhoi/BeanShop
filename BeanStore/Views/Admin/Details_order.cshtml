@@ -1,0 +1,43 @@
+﻿@model BeanStore.Models.order
+
+@{
+    ViewBag.Title = "Details_order";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>Details Order</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Status:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.status.name)
+        </dd>
+        <dt>
+            User:
+        <dd>
+            @Html.DisplayFor(model => model.user.name)
+        </dd>
+        <dt>
+            Order date:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.order_date)
+        </dd>
+        @if (Model.status_id == 3)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.delivery_date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.delivery_date)
+            </dd>
+        }
+        @Html.Action("Det_Order", new { id = Model.id })
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Order", new { id = Model.status_id })
+</p>

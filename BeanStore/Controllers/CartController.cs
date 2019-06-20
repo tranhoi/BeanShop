@@ -108,6 +108,7 @@ namespace BeanStore.Controllers
             lstCart.Clear();
             return RedirectToAction("Index", "Bean");
         }
+        [HttpGet]
         public ActionResult Order()
         {
             if (Session["UserAccount"] == null || Session["UserAccount"].ToString() == "")
@@ -130,7 +131,8 @@ namespace BeanStore.Controllers
             user use = (user)Session["UserAccount"];
             List<Cart> cart = GetCart();
             ord.user_id = use.id;
-            ord.status = false;
+            ord.order_date = DateTime.Today;
+            ord.status_id = 1;
             data.orders.InsertOnSubmit(ord);
             data.SubmitChanges();   
             foreach (var item in cart)
@@ -139,7 +141,7 @@ namespace BeanStore.Controllers
                 d_ord.order_id = ord.id;
                 d_ord.item_id = item.cId;
                 d_ord.quantity = item.cQuantity;
-                d_ord.amount = (decimal)item.cAmount;
+                d_ord.amount = (int)item.cAmount;
                 data.det_orders.InsertOnSubmit(d_ord);
             }
             data.SubmitChanges();

@@ -20,10 +20,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="billing-details">
+                    @if (ViewBag.Notification != null)
+                    {
+                        <div class="alert">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Error!</strong> @ViewBag.Notification.
+                        </div>
+                    }
                     <p>Already a customer ? <a href="@Url.Action("Login", "User")">Login</a></p>
                     <div class="section-title">
                         <h3 class="title">Your Information</h3>
-                        <h4 style="color:orange; text-align:center"> @ViewBag.Notification</h4>
                     </div>
                     @using (Html.BeginForm())
                     {
@@ -43,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    <input class="input" type="text" name="phone" placeholder="Number Phone" >
+                                    <input class="input" type="text" name="phone" placeholder="Number Phone">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -53,7 +59,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    <input class="input" type="text" name="password" placeholder="Password (*)" required>
+                                    <input class="input" type="password" name="password" placeholder="Password (*)" required>
                                 </div>
                             </div>
                         </div>

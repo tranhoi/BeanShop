@@ -334,8 +334,30 @@
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #F8694A;
+            color: white;
+        }
 
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .closebtn:hover {
+                color: black;
+            }
+    </style>
     <!-- Your customer chat code -->
     <div class="fb-customerchat"
          attribution=setup_tool

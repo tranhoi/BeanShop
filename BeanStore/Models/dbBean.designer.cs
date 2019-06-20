@@ -54,9 +54,15 @@ namespace BeanStore.Models
     partial void Insertorder(order instance);
     partial void Updateorder(order instance);
     partial void Deleteorder(order instance);
+    partial void Insertposition(position instance);
+    partial void Updateposition(position instance);
+    partial void Deleteposition(position instance);
     partial void Insertranked(ranked instance);
     partial void Updateranked(ranked instance);
     partial void Deleteranked(ranked instance);
+    partial void Insertstatus(status instance);
+    partial void Updatestatus(status instance);
+    partial void Deletestatus(status instance);
     #endregion
 		
 		public dbBeanDataContext() : 
@@ -153,11 +159,27 @@ namespace BeanStore.Models
 			}
 		}
 		
+		public System.Data.Linq.Table<position> positions
+		{
+			get
+			{
+				return this.GetTable<position>();
+			}
+		}
+		
 		public System.Data.Linq.Table<ranked> rankeds
 		{
 			get
 			{
 				return this.GetTable<ranked>();
+			}
+		}
+		
+		public System.Data.Linq.Table<status> status
+		{
+			get
+			{
+				return this.GetTable<status>();
 			}
 		}
 	}
@@ -170,11 +192,15 @@ namespace BeanStore.Models
 		
 		private int _id;
 		
+		private System.Nullable<int> _position_id;
+		
 		private string _name;
 		
 		private string _username;
 		
 		private string _password;
+		
+		private EntityRef<position> _position;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -182,6 +208,8 @@ namespace BeanStore.Models
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void Onposition_idChanging(System.Nullable<int> value);
+    partial void Onposition_idChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
     partial void OnusernameChanging(string value);
@@ -192,6 +220,7 @@ namespace BeanStore.Models
 		
 		public admin()
 		{
+			this._position = default(EntityRef<position>);
 			OnCreated();
 		}
 		
@@ -211,6 +240,30 @@ namespace BeanStore.Models
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position_id", DbType="Int")]
+		public System.Nullable<int> position_id
+		{
+			get
+			{
+				return this._position_id;
+			}
+			set
+			{
+				if ((this._position_id != value))
+				{
+					if (this._position.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onposition_idChanging(value);
+					this.SendPropertyChanging();
+					this._position_id = value;
+					this.SendPropertyChanged("position_id");
+					this.Onposition_idChanged();
 				}
 			}
 		}
@@ -271,6 +324,40 @@ namespace BeanStore.Models
 					this._password = value;
 					this.SendPropertyChanged("password");
 					this.OnpasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="position_admin", Storage="_position", ThisKey="position_id", OtherKey="id", IsForeignKey=true)]
+		public position position
+		{
+			get
+			{
+				return this._position.Entity;
+			}
+			set
+			{
+				position previousValue = this._position.Entity;
+				if (((previousValue != value) 
+							|| (this._position.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._position.Entity = null;
+						previousValue.admins.Remove(this);
+					}
+					this._position.Entity = value;
+					if ((value != null))
+					{
+						value.admins.Add(this);
+						this._position_id = value.id;
+					}
+					else
+					{
+						this._position_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("position");
 				}
 			}
 		}
@@ -858,7 +945,7 @@ namespace BeanStore.Models
 		
 		private System.Nullable<int> _quantity;
 		
-		private System.Nullable<decimal> _amount;
+		private System.Nullable<int> _amount;
 		
 		private EntityRef<item> _item;
 		
@@ -876,7 +963,7 @@ namespace BeanStore.Models
     partial void Onitem_idChanged();
     partial void OnquantityChanging(System.Nullable<int> value);
     partial void OnquantityChanged();
-    partial void OnamountChanging(System.Nullable<decimal> value);
+    partial void OnamountChanging(System.Nullable<int> value);
     partial void OnamountChanged();
     #endregion
 		
@@ -975,8 +1062,8 @@ namespace BeanStore.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Decimal(18,0)")]
-		public System.Nullable<decimal> amount
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Int")]
+		public System.Nullable<int> amount
 		{
 			get
 			{
@@ -1643,17 +1730,17 @@ namespace BeanStore.Models
 		
 		private int _user_id;
 		
-		private bool _status;
+		private System.Nullable<int> _status_id;
 		
 		private System.Nullable<System.DateTime> _order_date;
 		
 		private System.Nullable<System.DateTime> _delivery_date;
 		
-		private System.Nullable<decimal> _total_price;
-		
 		private EntitySet<det_order> _det_orders;
 		
 		private EntityRef<user> _user;
+		
+		private EntityRef<status> _status;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1663,20 +1750,19 @@ namespace BeanStore.Models
     partial void OnidChanged();
     partial void Onuser_idChanging(int value);
     partial void Onuser_idChanged();
-    partial void OnstatusChanging(bool value);
-    partial void OnstatusChanged();
+    partial void Onstatus_idChanging(System.Nullable<int> value);
+    partial void Onstatus_idChanged();
     partial void Onorder_dateChanging(System.Nullable<System.DateTime> value);
     partial void Onorder_dateChanged();
     partial void Ondelivery_dateChanging(System.Nullable<System.DateTime> value);
     partial void Ondelivery_dateChanged();
-    partial void Ontotal_priceChanging(System.Nullable<decimal> value);
-    partial void Ontotal_priceChanged();
     #endregion
 		
 		public order()
 		{
 			this._det_orders = new EntitySet<det_order>(new Action<det_order>(this.attach_det_orders), new Action<det_order>(this.detach_det_orders));
 			this._user = default(EntityRef<user>);
+			this._status = default(EntityRef<status>);
 			OnCreated();
 		}
 		
@@ -1724,22 +1810,26 @@ namespace BeanStore.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Bit NOT NULL")]
-		public bool status
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status_id", DbType="Int")]
+		public System.Nullable<int> status_id
 		{
 			get
 			{
-				return this._status;
+				return this._status_id;
 			}
 			set
 			{
-				if ((this._status != value))
+				if ((this._status_id != value))
 				{
-					this.OnstatusChanging(value);
+					if (this._status.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onstatus_idChanging(value);
 					this.SendPropertyChanging();
-					this._status = value;
-					this.SendPropertyChanged("status");
-					this.OnstatusChanged();
+					this._status_id = value;
+					this.SendPropertyChanged("status_id");
+					this.Onstatus_idChanged();
 				}
 			}
 		}
@@ -1780,26 +1870,6 @@ namespace BeanStore.Models
 					this._delivery_date = value;
 					this.SendPropertyChanged("delivery_date");
 					this.Ondelivery_dateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total_price", DbType="Decimal(18,0)")]
-		public System.Nullable<decimal> total_price
-		{
-			get
-			{
-				return this._total_price;
-			}
-			set
-			{
-				if ((this._total_price != value))
-				{
-					this.Ontotal_priceChanging(value);
-					this.SendPropertyChanging();
-					this._total_price = value;
-					this.SendPropertyChanged("total_price");
-					this.Ontotal_priceChanged();
 				}
 			}
 		}
@@ -1851,6 +1921,40 @@ namespace BeanStore.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="status_order", Storage="_status", ThisKey="status_id", OtherKey="id", IsForeignKey=true)]
+		public status status
+		{
+			get
+			{
+				return this._status.Entity;
+			}
+			set
+			{
+				status previousValue = this._status.Entity;
+				if (((previousValue != value) 
+							|| (this._status.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._status.Entity = null;
+						previousValue.orders.Remove(this);
+					}
+					this._status.Entity = value;
+					if ((value != null))
+					{
+						value.orders.Add(this);
+						this._status_id = value.id;
+					}
+					else
+					{
+						this._status_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("status");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1881,6 +1985,120 @@ namespace BeanStore.Models
 		{
 			this.SendPropertyChanging();
 			entity.order = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.position")]
+	public partial class position : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _name;
+		
+		private EntitySet<admin> _admins;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    #endregion
+		
+		public position()
+		{
+			this._admins = new EntitySet<admin>(new Action<admin>(this.attach_admins), new Action<admin>(this.detach_admins));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(20)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="position_admin", Storage="_admins", ThisKey="id", OtherKey="position_id")]
+		public EntitySet<admin> admins
+		{
+			get
+			{
+				return this._admins;
+			}
+			set
+			{
+				this._admins.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_admins(admin entity)
+		{
+			this.SendPropertyChanging();
+			entity.position = this;
+		}
+		
+		private void detach_admins(admin entity)
+		{
+			this.SendPropertyChanging();
+			entity.position = null;
 		}
 	}
 	
@@ -1995,6 +2213,120 @@ namespace BeanStore.Models
 		{
 			this.SendPropertyChanging();
 			entity.ranked = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.status")]
+	public partial class status : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _name;
+		
+		private EntitySet<order> _orders;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    #endregion
+		
+		public status()
+		{
+			this._orders = new EntitySet<order>(new Action<order>(this.attach_orders), new Action<order>(this.detach_orders));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(20)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="status_order", Storage="_orders", ThisKey="id", OtherKey="status_id")]
+		public EntitySet<order> orders
+		{
+			get
+			{
+				return this._orders;
+			}
+			set
+			{
+				this._orders.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_orders(order entity)
+		{
+			this.SendPropertyChanging();
+			entity.status = this;
+		}
+		
+		private void detach_orders(order entity)
+		{
+			this.SendPropertyChanging();
+			entity.status = null;
 		}
 	}
 }

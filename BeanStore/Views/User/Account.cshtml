@@ -1,4 +1,4 @@
-﻿@if (ViewBag.Notification == null)
+﻿@if (ViewBag.User_name == null)
 {
     <li class="header-account dropdown default-dropdown">
         <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
@@ -21,7 +21,7 @@ else
             <div class="header-btns-icon">
                 <i class="fa fa-user-o"></i>
             </div>
-            <strong class="text-uppercase"> @ViewBag.Notification </strong>
+            <strong class="text-uppercase"> @ViewBag.User_name </strong>
         </div>
         <a href="@Url.Action("Logout", "User")" class="text-uppercase">Logout</a>
     </li>

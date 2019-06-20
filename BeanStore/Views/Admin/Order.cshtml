@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BeanStore.Models.order>
+
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3>Orders Management</h3>
+<hr />
+<table class="table">
+    <tr>
+        <th style="width:200px">Status</th>
+        <th style="width:200px">User</th>
+        <th style="width:200px">Order date</th>
+        <th style="width:200px">Total price</th>
+        <th style="width:200px">Move to</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="color:#FF6600">
+                @Html.DisplayFor(modelItem => item.status.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_date)
+            </td>
+            <td></td>
+            <td>
+                @if (item.status_id == 1) {
+                    @Html.ActionLink("Shipped", "Change_status", new { id = item.id })
+                }
+                else {
+                    if (item.status_id == 2) {
+                        @Html.ActionLink("Delivered", "Change_status", new { id = item.id })
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details_order", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete_order", new { id = item.id })
+            </td>
+        </tr>
+    }
+</table>

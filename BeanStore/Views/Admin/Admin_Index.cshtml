@@ -4,3 +4,55 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 <h2>Admin Page</h2>
+<hr />
+<h3>Hello <a>@ViewBag.User_name</a>! Welcome to the management page of BeanShop</h3>
+<hr />
+<h4>You are <a>@ViewBag.User_position</a>, you can access the functions: </h4>
+@if (ViewBag.User_position_id == 3)
+{
+    <ul>
+        <li>
+            <a>Banner management</a>
+        </li>
+        <li>
+            <a>Product management</a>
+        </li>
+        <li>
+            <a>Customer management</a>
+        </li>
+        <li>
+            <a>Admin management</a>
+        </li>
+        <li>
+            <a>Order management</a>
+        </li>
+    </ul>
+}
+else
+{
+    if (ViewBag.User_position_id == 2)
+    {
+        <ul>
+            <li>
+                <a>Product management</a>
+            </li>
+            <li>
+                <a>Customer management</a>
+            </li>
+            <li>
+                <a>Order management</a>
+            </li>
+        </ul>
+    }
+    else
+    {
+        <ul>
+            <li>
+                <a>Customer management</a>
+            </li>
+            <li>
+                <a>Order management</a>
+            </li>
+        </ul>
+    }
+}

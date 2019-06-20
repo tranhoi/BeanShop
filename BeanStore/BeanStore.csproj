@@ -276,7 +276,6 @@
     <Content Include="images_brand\CommonPlasticBug-poster.jpg" />
     <Content Include="images_brand\download.png" />
     <Content Include="images_brand\f2-kinh-doanh-dien-thoai-va-phu-kien-2-1.jpg" />
-    <Content Include="images_brand\huawei-logo.png" />
     <Content Include="images_brand\lenovo-yoga-tablet-3-8-hero.png" />
     <Content Include="images_brand\thi-truong-smartphone-1-152532608338212273564431 %281%29.jpg" />
     <Content Include="images_product\13d2a6a0bf0091253dbafdd6aa3a3efa_xl.jpg" />
@@ -319,11 +318,11 @@
     <Content Include="images_product\xs-back_8_3.png" />
     <Content Include="images_product\xs-max-gold-sgmall-2sim-2_3.jpg" />
     <Content Include="images_product\xs_8_3.png" />
-    <Content Include="images_brand\Huawei42-b_22.png" />
-    <Content Include="images_brand\iPhone-%28Apple%2942-b_16.jpg" />
-    <Content Include="images_brand\Nokia42-b_21.jpg" />
-    <Content Include="images_brand\Samsung42-b_25.jpg" />
-    <Content Include="images_brand\Xiaomi42-b_31.png" />
+    <Content Include="images_logo\Huawei42-b_22.png" />
+    <Content Include="images_logo\iPhone-%28Apple%2942-b_16.jpg" />
+    <Content Include="images_logo\Nokia42-b_21.jpg" />
+    <Content Include="images_logo\Samsung42-b_25.jpg" />
+    <Content Include="images_logo\Xiaomi42-b_31.png" />
     <Content Include="Login_v16\css\main.css" />
     <Content Include="Login_v16\css\util.css" />
     <Content Include="Login_v16\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -599,16 +598,34 @@
     <Content Include="Views\Admin\Create_Items.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Admin\Admin_Index.cshtml" />
-    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\Details_product.cshtml" />
     <Content Include="tinymce\js\tinymce\langs\readme.md" />
     <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\tinymce-mobile.woff" />
     <Content Include="tinymce\js\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
     <Content Include="tinymce\js\tinymce\skins\ui\oxide\tinymce-mobile.woff" />
     <Content Include="Views\Bean\Banner.cshtml" />
-    <Content Include="Views\Admin\Delete.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Delete_product.cshtml" />
+    <Content Include="Views\Admin\Edit_product.cshtml" />
     <Content Include="Views\Admin\Banner.cshtml" />
     <Content Include="Views\Admin\Inset_banner.cshtml" />
+    <Content Include="Views\Admin\Brand.cshtml" />
+    <Content Include="Views\Admin\Catalog.cshtml" />
+    <Content Include="Views\Admin\Inset_brand.cshtml" />
+    <Content Include="Views\Admin\Inset_catalog.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
+    <Content Include="Views\Admin\Admins.cshtml" />
+    <Content Include="Views\Admin\Created_admin.cshtml" />
+    <Content Include="Views\Admin\Delete_user.cshtml" />
+    <Content Include="Views\Admin\Delete_admin.cshtml" />
+    <Content Include="Views\Admin\Edit_user.cshtml" />
+    <Content Include="Views\Admin\Edit_admin.cshtml" />
+    <Content Include="Views\Admin\Details_order.cshtml" />
+    <Content Include="Views\Admin\Det_Order.cshtml" />
+    <Content Include="Views\Admin\Status.cshtml" />
+    <Content Include="Views\Admin\Order.cshtml" />
+    <Content Include="Views\Admin\Delete_order.cshtml" />
+    <Content Include="Views\Admin\Account.cshtml" />
+    <Content Include="Views\Admin\Function.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

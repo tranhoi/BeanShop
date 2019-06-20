@@ -21,7 +21,7 @@ namespace BeanStore.Models
             get {
                 if(cSale != 0)
                 {
-                    return (cQuantity * cPrice) - (cPrice * (cSale/100));
+                    return (cQuantity * cPrice) - ((cQuantity * cPrice) * (cSale/100));
                 }
                 else { return cQuantity * cPrice; }
             }

@@ -31,10 +31,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Admin_Index" style="color:#FF6600">BeanShop</a>
+                <a class="navbar-brand" href="@Url.Action("Admin_Index", "Admin")" style="color:#FF6600">BeanShop</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
+                <!--
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -83,9 +84,7 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-messages -->
                 </li>
-                <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -162,9 +161,7 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-tasks -->
                 </li>
-                <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -222,25 +219,13 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-alerts -->
                 </li>
-                <!-- /.dropdown -->
+                -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
+                    @Html.Action("Account", "Admin")
                     <!-- /.dropdown-user -->
                 </li>
                 <!-- /.dropdown -->
@@ -250,47 +235,9 @@
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-                    <li>
-                        <a href="Banner"><i class="fa fa-dashboard"></i> Banner </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Product <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="Items">Product</a>
-                            </li>
-                            <li>
-                                <a href="#">Brand</a>
-                            </li>
-                            <li>
-                                <a href="#">Catalog</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-desktop"></i> UI Elements</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-bar-chart-o"></i> Banner</a>
-                    </li>
-
-                    <li>
-                        <a href=""><i class="fa fa-table"></i> Responsive Tables</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-edit"></i> Forms </a>
-                    </li>
-
-                    <li>
-                        <a href=""><i class="fa fa-fw fa-file"></i> Empty Page</a>
-                    </li>
-                </ul>
-
+                    @Html.Action("Function")
+                 </ul>
             </div>
-
         </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">

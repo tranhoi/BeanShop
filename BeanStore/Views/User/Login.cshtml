@@ -19,10 +19,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="billing-details">
+                    @if (ViewBag.Notification != null)
+                    {
+                        <div class="alert">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Error!</strong> @ViewBag.Notification.
+                        </div>
+                    }
                     <p>Do not have an account ? <a href="@Url.Action("Register", "User")">Create an account</a></p>
                     <div class="section-title">
                         <h3 class="title">Your Information</h3>
-                        <h4 style="color:#F8694A; text-align:center"> @ViewBag.Notification</h4>
                     </div>
                     @using (Html.BeginForm())
                     {

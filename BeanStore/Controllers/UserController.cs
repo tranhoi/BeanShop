@@ -36,12 +36,12 @@ namespace BeanStore.Controllers
             //----------------
             return View(use);
         }
-        [HttpGet]
-        public ActionResult Login()
+        public ActionResult Register_Success()
         {
             return View();
         }
-        public ActionResult Register_Success()
+        [HttpGet]
+        public ActionResult Login()
         {
             return View();
         }
@@ -75,11 +75,11 @@ namespace BeanStore.Controllers
             user use = (user)Session["UserAccount"];
             if (Session["UserAccount"] != null)
             {
-                ViewBag.Notification = use.name;
+                ViewBag.User_name = use.name;
             }
             else
             {
-                ViewBag.Notification = null;
+                ViewBag.User_name = null;
             }
             return PartialView();
         }

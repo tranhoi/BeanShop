@@ -6,19 +6,22 @@
     ViewBag.Title = "Items";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h2>Manage Product</h2>
+<h2>Product Management</h2>
 <p>
-    @Html.ActionLink("Create New", "Create_Items", "Admin")
+    @Html.ActionLink("Create new product", "Create_Items", "Admin")
 </p>
 <table class="table">
     <tr>
+        <th style="width:200px">Name</th>
         <th style="width:200px">Brand</th>
         <th style="width:200px">Catalog</th>
-        <th style="width:200px">Name</th>
+        <th style="width:200px">Ranked</th>
+        <!--
         <th style="width:200px">Price</th>
         <th style="width:200px">Discount</th>
         <th style="width:200px">Created</th>
         <th style="width:200px">Sale</th>
+        -->
         <th style="width:200px">Image</th>
         <th style="width:200px">Image 2</th>
         <th style="width:200px">Image 3</th>
@@ -31,26 +34,31 @@
     {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.brand.name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.catalog.name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.name)
+            @Html.DisplayFor(modelItem => item.ranked.name)
+        </td>
+        <!--
+        <td>
+            Html.DisplayFor(modelItem => item.price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.price)
+            Html.DisplayFor(modelItem => item.discount)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.discount)
+            Html.DisplayFor(modelItem => item.created)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.created)
+            Html.DisplayFor(modelItem => item.sale)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sale)
-        </td>
+        -->
         <td>
             <img class="miniimg-products" src="~/images_product/@item.image_link" />
         </td>
@@ -79,9 +87,9 @@
             else { }
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            @Html.ActionLink("Edit", "Edit_product", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details_product", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete_product", new { id = item.id })
         </td>
     </tr>
     }
