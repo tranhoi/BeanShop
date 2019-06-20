@@ -1,0 +1,92 @@
+﻿@using BeanStore.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<BeanStore.Models.item>
+
+@{
+    ViewBag.Title = "Items";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>Manage Product</h2>
+<p>
+    @Html.ActionLink("Create New", "Create_Items", "Admin")
+</p>
+<table class="table">
+    <tr>
+        <th style="width:200px">Brand</th>
+        <th style="width:200px">Catalog</th>
+        <th style="width:200px">Name</th>
+        <th style="width:200px">Price</th>
+        <th style="width:200px">Discount</th>
+        <th style="width:200px">Created</th>
+        <th style="width:200px">Sale</th>
+        <th style="width:200px">Image</th>
+        <th style="width:200px">Image 2</th>
+        <th style="width:200px">Image 3</th>
+        <th style="width:200px">Image 4</th>
+        <th style="width:200px">Image 5</th>
+        <th style="width:200px"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.brand.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.catalog.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sale)
+        </td>
+        <td>
+            <img class="miniimg-products" src="~/images_product/@item.image_link" />
+        </td>
+        <td>
+            @if (item.image_link2 != null)
+            {
+                <img class="miniimg-products" src="~/images_product/@item.image_link2" />}
+            else { }
+        </td>
+        <td>
+            @if (item.image_link3 != null)
+            {
+                <img class="miniimg-products" src="~/images_product/@item.image_link3" />}
+            else { }
+        </td>
+        <td>
+            @if (item.image_link4 != null)
+            {
+                <img class="miniimg-products" src="~/images_product/@item.image_link4" />}
+            else { }
+        </td>
+        <td>
+            @if (item.image_link5 != null)
+            {
+                <img class="miniimg-products" src="~/images_product/@item.image_link5" />}
+            else { }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+    </tr>
+    }
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Items", new { page = page }))
+</div>

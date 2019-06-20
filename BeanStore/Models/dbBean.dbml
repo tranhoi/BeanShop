@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BeanStore" Class="dbBeanDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLPATHEO;Initial Catalog=BeanStore;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BeanStoreConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLPATHEO;Initial Catalog=BeanStore;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BeanStoreConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin" Member="admins">
     <Type Name="admin">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -19,13 +19,17 @@
       <Association Name="user_order" Member="orders" ThisKey="id" OtherKey="user_id" Type="order" />
     </Type>
   </Table>
+  <Table Name="dbo.banner" Member="banners">
+    <Type Name="banner">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="banner_link" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.brand" Member="brands">
     <Type Name="brand">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="banner_link" Type="System.String" DbType="Char(100)" CanBeNull="true" />
       <Column Name="logo" Type="System.String" DbType="Char(100)" CanBeNull="true" />
-      <Column Name="showinbanner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="brand_item" Member="items" ThisKey="id" OtherKey="brand_id" Type="item" />
     </Type>
   </Table>
@@ -52,11 +56,13 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="brand_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="catalog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ranked_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="sale" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
       <Column Name="image_link" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="image_link2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="image_link3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
@@ -65,6 +71,7 @@
       <Association Name="item_det_order" Member="det_orders" ThisKey="id" OtherKey="item_id" Type="det_order" />
       <Association Name="brand_item" Member="brand" ThisKey="brand_id" OtherKey="id" Type="brand" IsForeignKey="true" />
       <Association Name="catalog_item" Member="catalog" ThisKey="catalog_id" OtherKey="id" Type="catalog" IsForeignKey="true" />
+      <Association Name="ranked_item" Member="ranked" ThisKey="ranked_id" OtherKey="id" Type="ranked" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.[order]" Member="orders">
@@ -77,6 +84,13 @@
       <Column Name="total_price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Association Name="order_det_order" Member="det_orders" ThisKey="id" OtherKey="order_id" Type="det_order" />
       <Association Name="user_order" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ranked" Member="rankeds">
+    <Type Name="ranked">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="ranked_item" Member="items" ThisKey="id" OtherKey="ranked_id" Type="item" />
     </Type>
   </Table>
 </Database>

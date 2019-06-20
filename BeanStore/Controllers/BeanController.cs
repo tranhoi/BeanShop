@@ -63,12 +63,11 @@ namespace BeanStore.Controllers
                          select cal;
             return PartialView(catalogs);
         }
-        public ActionResult Banner_Brand()
+        public ActionResult Banner()
         {
-            var brands = from bra in data.brands
-                         where bra.showinbanner == true
+            var banner = from bra in data.banners
                          select bra;
-            return PartialView(brands);
+            return PartialView(banner);
         }
         public ActionResult Items_Brand(int id, int? page)
         {

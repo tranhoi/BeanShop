@@ -36,6 +36,9 @@ namespace BeanStore.Models
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
+    partial void Insertbanner(banner instance);
+    partial void Updatebanner(banner instance);
+    partial void Deletebanner(banner instance);
     partial void Insertbrand(brand instance);
     partial void Updatebrand(brand instance);
     partial void Deletebrand(brand instance);
@@ -51,10 +54,13 @@ namespace BeanStore.Models
     partial void Insertorder(order instance);
     partial void Updateorder(order instance);
     partial void Deleteorder(order instance);
+    partial void Insertranked(ranked instance);
+    partial void Updateranked(ranked instance);
+    partial void Deleteranked(ranked instance);
     #endregion
 		
 		public dbBeanDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BeanStoreConnectionString3"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BeanStoreConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -99,6 +105,14 @@ namespace BeanStore.Models
 			}
 		}
 		
+		public System.Data.Linq.Table<banner> banners
+		{
+			get
+			{
+				return this.GetTable<banner>();
+			}
+		}
+		
 		public System.Data.Linq.Table<brand> brands
 		{
 			get
@@ -136,6 +150,14 @@ namespace BeanStore.Models
 			get
 			{
 				return this.GetTable<order>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ranked> rankeds
+		{
+			get
+			{
+				return this.GetTable<ranked>();
 			}
 		}
 	}
@@ -484,6 +506,92 @@ namespace BeanStore.Models
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.banner")]
+	public partial class banner : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _banner_link;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void Onbanner_linkChanging(string value);
+    partial void Onbanner_linkChanged();
+    #endregion
+		
+		public banner()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_banner_link", DbType="VarChar(100)")]
+		public string banner_link
+		{
+			get
+			{
+				return this._banner_link;
+			}
+			set
+			{
+				if ((this._banner_link != value))
+				{
+					this.Onbanner_linkChanging(value);
+					this.SendPropertyChanging();
+					this._banner_link = value;
+					this.SendPropertyChanged("banner_link");
+					this.Onbanner_linkChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.brand")]
 	public partial class brand : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -494,11 +602,7 @@ namespace BeanStore.Models
 		
 		private string _name;
 		
-		private string _banner_link;
-		
 		private string _logo;
-		
-		private bool _showinbanner;
 		
 		private EntitySet<item> _items;
 		
@@ -510,12 +614,8 @@ namespace BeanStore.Models
     partial void OnidChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
-    partial void Onbanner_linkChanging(string value);
-    partial void Onbanner_linkChanged();
     partial void OnlogoChanging(string value);
     partial void OnlogoChanged();
-    partial void OnshowinbannerChanging(bool value);
-    partial void OnshowinbannerChanged();
     #endregion
 		
 		public brand()
@@ -564,26 +664,6 @@ namespace BeanStore.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_banner_link", DbType="Char(100)")]
-		public string banner_link
-		{
-			get
-			{
-				return this._banner_link;
-			}
-			set
-			{
-				if ((this._banner_link != value))
-				{
-					this.Onbanner_linkChanging(value);
-					this.SendPropertyChanging();
-					this._banner_link = value;
-					this.SendPropertyChanged("banner_link");
-					this.Onbanner_linkChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_logo", DbType="Char(100)")]
 		public string logo
 		{
@@ -600,26 +680,6 @@ namespace BeanStore.Models
 					this._logo = value;
 					this.SendPropertyChanged("logo");
 					this.OnlogoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_showinbanner", DbType="Bit NOT NULL")]
-		public bool showinbanner
-		{
-			get
-			{
-				return this._showinbanner;
-			}
-			set
-			{
-				if ((this._showinbanner != value))
-				{
-					this.OnshowinbannerChanging(value);
-					this.SendPropertyChanging();
-					this._showinbanner = value;
-					this.SendPropertyChanged("showinbanner");
-					this.OnshowinbannerChanged();
 				}
 			}
 		}
@@ -1036,6 +1096,8 @@ namespace BeanStore.Models
 		
 		private int _catalog_id;
 		
+		private System.Nullable<int> _ranked_id;
+		
 		private string _name;
 		
 		private System.Nullable<int> _price;
@@ -1045,6 +1107,8 @@ namespace BeanStore.Models
 		private System.Nullable<System.DateTime> _created;
 		
 		private System.Nullable<int> _sale;
+		
+		private string _description;
 		
 		private string _image_link;
 		
@@ -1062,6 +1126,8 @@ namespace BeanStore.Models
 		
 		private EntityRef<catalog> _catalog;
 		
+		private EntityRef<ranked> _ranked;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1072,6 +1138,8 @@ namespace BeanStore.Models
     partial void Onbrand_idChanged();
     partial void Oncatalog_idChanging(int value);
     partial void Oncatalog_idChanged();
+    partial void Onranked_idChanging(System.Nullable<int> value);
+    partial void Onranked_idChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
     partial void OnpriceChanging(System.Nullable<int> value);
@@ -1082,6 +1150,8 @@ namespace BeanStore.Models
     partial void OncreatedChanged();
     partial void OnsaleChanging(System.Nullable<int> value);
     partial void OnsaleChanged();
+    partial void OndescriptionChanging(string value);
+    partial void OndescriptionChanged();
     partial void Onimage_linkChanging(string value);
     partial void Onimage_linkChanged();
     partial void Onimage_link2Changing(string value);
@@ -1099,6 +1169,7 @@ namespace BeanStore.Models
 			this._det_orders = new EntitySet<det_order>(new Action<det_order>(this.attach_det_orders), new Action<det_order>(this.detach_det_orders));
 			this._brand = default(EntityRef<brand>);
 			this._catalog = default(EntityRef<catalog>);
+			this._ranked = default(EntityRef<ranked>);
 			OnCreated();
 		}
 		
@@ -1170,7 +1241,31 @@ namespace BeanStore.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ranked_id", DbType="Int")]
+		public System.Nullable<int> ranked_id
+		{
+			get
+			{
+				return this._ranked_id;
+			}
+			set
+			{
+				if ((this._ranked_id != value))
+				{
+					if (this._ranked.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onranked_idChanging(value);
+					this.SendPropertyChanging();
+					this._ranked_id = value;
+					this.SendPropertyChanged("ranked_id");
+					this.Onranked_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100)")]
 		public string name
 		{
 			get
@@ -1266,6 +1361,26 @@ namespace BeanStore.Models
 					this._sale = value;
 					this.SendPropertyChanged("sale");
 					this.OnsaleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="VarChar(2000)")]
+		public string description
+		{
+			get
+			{
+				return this._description;
+			}
+			set
+			{
+				if ((this._description != value))
+				{
+					this.OndescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._description = value;
+					this.SendPropertyChanged("description");
+					this.OndescriptionChanged();
 				}
 			}
 		}
@@ -1447,6 +1562,40 @@ namespace BeanStore.Models
 						this._catalog_id = default(int);
 					}
 					this.SendPropertyChanged("catalog");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ranked_item", Storage="_ranked", ThisKey="ranked_id", OtherKey="id", IsForeignKey=true)]
+		public ranked ranked
+		{
+			get
+			{
+				return this._ranked.Entity;
+			}
+			set
+			{
+				ranked previousValue = this._ranked.Entity;
+				if (((previousValue != value) 
+							|| (this._ranked.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ranked.Entity = null;
+						previousValue.items.Remove(this);
+					}
+					this._ranked.Entity = value;
+					if ((value != null))
+					{
+						value.items.Add(this);
+						this._ranked_id = value.id;
+					}
+					else
+					{
+						this._ranked_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ranked");
 				}
 			}
 		}
@@ -1732,6 +1881,120 @@ namespace BeanStore.Models
 		{
 			this.SendPropertyChanging();
 			entity.order = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ranked")]
+	public partial class ranked : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _name;
+		
+		private EntitySet<item> _items;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    #endregion
+		
+		public ranked()
+		{
+			this._items = new EntitySet<item>(new Action<item>(this.attach_items), new Action<item>(this.detach_items));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(10)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ranked_item", Storage="_items", ThisKey="id", OtherKey="ranked_id")]
+		public EntitySet<item> items
+		{
+			get
+			{
+				return this._items;
+			}
+			set
+			{
+				this._items.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_items(item entity)
+		{
+			this.SendPropertyChanging();
+			entity.ranked = this;
+		}
+		
+		private void detach_items(item entity)
+		{
+			this.SendPropertyChanging();
+			entity.ranked = null;
 		}
 	}
 }
