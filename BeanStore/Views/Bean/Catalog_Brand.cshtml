@@ -1,0 +1,4 @@
+﻿@foreach (var item in Model)
+{
+    <li><a href="@Url.Action("Items_Catalog_Brand", "Bean", new { cid = @ViewBag.Catalog_brand_id, bid = item.id })">@item.name</a></li>
+}

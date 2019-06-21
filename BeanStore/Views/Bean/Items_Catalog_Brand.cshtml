@@ -1,0 +1,94 @@
+﻿@using BeanStore.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<item>
+@{
+    ViewBag.Title = "Items_Catalog_Brand";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
+            <li class="active">seach list</li>
+        </ul>
+    </div>
+</div>
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    @foreach (var items in Model)
+                    {
+                        <h2 class="title">Product</h2>
+                        break;
+                    }
+                </div>
+            </div>
+            <!-- section title -->
+            @foreach (var items in Model)
+            {
+                <!-- Product Single -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="product product-single">
+                        <div class="product-thumb">
+                            <div class="product-label">
+                                <span>New</span>
+                                @if (@items.sale != 0)
+                                {
+                                    <span class="sale">-@items.sale%</span>
+                                }
+                            </div>
+                            <a href="@Url.Action("Details", "Bean", new { id = items.id})">
+                                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+                            </a>
+                            <img alt="@items.name" src="/images_product/@items.image_link" height="280">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-price">$@items.price <del class="product-old-price">$45.00</del></h3>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o empty"></i>
+                            </div>
+                            <h2 class="product-name"><a href="#">@items.name</a></h2>
+                            <div class="product-btns">
+                                <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+                                <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+                                <a href="@Url.Action("AddCart", "Cart", new { @cId = @items.id, @strURL = Request.Url.ToString() })">
+                                    <button onclick="alert('Added to cart')" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Product Single -->
+            }
+        </div>
+        <!-- /row -->
+        <div id="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb">
+                    @if (Model.PageCount <= 1)
+                    {
+                        <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
+                    }
+                    else
+                    {
+                        <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
+                        @Html.PagedListPager(Model, page => Url.Action("Items_Catalog_Brand", new { page = page }))
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

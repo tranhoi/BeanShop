@@ -4,10 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BeanStore.Models;
-
 using PagedList;
 using PagedList.Mvc;
-
 namespace BeanStore.Controllers
 {
     public class BeanController : Controller
@@ -104,6 +102,71 @@ namespace BeanStore.Controllers
         public ActionResult Contact()
         {
             return View();
+        }
+        public ActionResult Items_Catalog_Brand(int cid, int bid, int? page)
+        {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+
+            var item = from ite in data.items
+                       where ite.catalog_id == cid && ite.brand_id == bid
+                       select ite;
+            if (item.Count() == 0)
+            {
+                return RedirectToAction("Blank_page", "Bean");
+            }
+            ViewBag.paging = pageSize;
+            return View(item.ToPagedList(pageNum, pageSize));
+        }
+        public ActionResult Items_Catalog_Ranked(int cid, int rid, int? page)
+        {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+
+            var item = from ite in data.items
+                       where ite.catalog_id == cid && ite.ranked_id == rid
+                       select ite;
+            if (item.Count() == 0)
+            {
+                return RedirectToAction("Blank_page", "Bean");
+            }
+            ViewBag.paging = pageSize;
+            return View(item.ToPagedList(pageNum, pageSize));
+        }
+        public ActionResult Catalog_Brand(int id)
+        {
+            var brands = from bra in data.brands select bra;
+            ViewBag.Catalog_brand_id = id;
+            return PartialView(brands);
+        }
+        public ActionResult Catalog_Ranked(int id)
+        {
+            var ranked = from ran in data.rankeds select ran;
+            ViewBag.Catalog_ranked_id = id;
+            return PartialView(ranked);
+        }
+        public ActionResult Blank_page()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Messenger()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Messenger(messeage mess)
+        {
+            if (ModelState.IsValid)
+            {
+                data.messeages.InsertOnSubmit(mess);
+                data.SubmitChanges();
+            }
+            return RedirectToAction("Index");
+        }
+        public ActionResult Order()
+        {
+            return View(data.orders.ToList().OrderByDescending(n => n.id));
         }
     }
 }

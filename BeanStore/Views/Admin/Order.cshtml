@@ -8,11 +8,11 @@
 <hr />
 <table class="table">
     <tr>
-        <th style="width:200px">Status</th>
-        <th style="width:200px">User</th>
-        <th style="width:200px">Order date</th>
-        <th style="width:200px">Total price</th>
-        <th style="width:200px">Move to</th>
+        <th style="width:150px">Status</th>
+        <th style="width:150px">User</th>
+        <th style="width:250px">Order date</th>
+        <th style="width:150px">Total price</th>
+        <th style="width:150px">Move to</th>
         <th></th>
     </tr>
     @foreach (var item in Model)
@@ -45,3 +45,6 @@
         </tr>
     }
 </table>
+<div>
+    @Html.ActionLink("Back to home", "Admin_Index")
+</div>

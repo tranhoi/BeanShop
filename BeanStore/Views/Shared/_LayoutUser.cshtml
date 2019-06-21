@@ -126,112 +126,76 @@
                     <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
                     <ul class="menu-list">
                         <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
-                        <li><a href="@Url.Action("Items_Catalog", "Bean", new { id = 1})">Smart Phone</a></li>
-                        <li><a href="@Url.Action("Items_Catalog", "Bean", new { id = 2})">Tablet</a></li>
-                        <li><a href="@Url.Action("Items_Catalog", "Bean", new { id = 3})">Gear</a></li>
-                        <!--
-                        <li class="dropdown mega-dropdown full-width">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Smart Phone <i class="fa fa-caret-down"></i></a>
-                            <div class="custom-menu">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="~/images_brand/Apple-Logo-black-800x600.png" />
-                                            </a>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="~/images_brand/download.png" />
-                                            </a>
-                                        </div>
-                                        <hr>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="~/images_brand/huawei-logo.png" />
-                                            </a>
-                                        </div>
-                                        <hr>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="~/images_brand/CommonPlasticBug-poster.jpg" />
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase">Other</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="dropdown mega-dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Women <i class="fa fa-caret-down"></i></a>
+                        <li class="dropdown side-dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Smart phone <i class="fa fa-angle-right"></i></a>
                             <div class="custom-menu">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <ul class="list-links">
                                             <li>
-                                                <h3 class="list-links-title">Categories</h3>
+                                                <h3 class="list-links-title" style="color:#F8694A">Brand</h3>
                                             </li>
-                                            <li><a href="#">Women’s Clothing</a></li>
-                                            <li><a href="#">Men’s Clothing</a></li>
-                                            <li><a href="#">Phones & Accessories</a></li>
-                                            <li><a href="#">Jewelry & Watches</a></li>
-                                            <li><a href="#">Bags & Shoes</a></li>
+                                            @Html.Action("Catalog_Brand", "Bean", new { id = 1 })
                                         </ul>
                                         <hr class="hidden-md hidden-lg">
                                     </div>
                                     <div class="col-md-4">
                                         <ul class="list-links">
                                             <li>
-                                                <h3 class="list-links-title">Categories</h3>
+                                                <h3 class="list-links-title" style="color:#F8694A">Ranked</h3>
                                             </li>
-                                            <li><a href="#">Women’s Clothing</a></li>
-                                            <li><a href="#">Men’s Clothing</a></li>
-                                            <li><a href="#">Phones & Accessories</a></li>
-                                            <li><a href="#">Jewelry & Watches</a></li>
-                                            <li><a href="#">Bags & Shoes</a></li>
+                                            @Html.Action("Catalog_Ranked", "Bean", new { id = 1 })
                                         </ul>
                                         <hr class="hidden-md hidden-lg">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Categories</h3>
-                                            </li>
-                                            <li><a href="#">Women’s Clothing</a></li>
-                                            <li><a href="#">Men’s Clothing</a></li>
-                                            <li><a href="#">Phones & Accessories</a></li>
-                                            <li><a href="#">Jewelry & Watches</a></li>
-                                            <li><a href="#">Bags & Shoes</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                                 <div class="row hidden-sm hidden-xs">
                                     <div class="col-md-12">
                                         <hr>
-                                        <a class="banner banner-1" href="#">
-                                            <img src="~/images/banner05.jpg" alt="">
+                                        <a class="banner banner-1" href="@Url.Action("Items_Catalog", "Bean", new { id = 1})">
+                                            <img src="~/images_banner/banner01.png" />
                                             <div class="banner-caption text-center">
-                                                <h2 class="white-color">NEW COLLECTION</h2>
-                                                <h3 class="white-color font-weak">HOT DEAL</h3>
+                                                <h3 class="white-color text-uppercase">view all smartphone</h3>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="Url.Action("About", "Bean")">About</a></li>
-                        -->
-                        <li><a href="@Url.Action("Contact", "Bean")">Contact</a></li>
+                        <li class="dropdown side-dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Tablet <i class="fa fa-angle-right"></i></a>
+                            <div class="custom-menu" style="width:500px">
+                                <div class="row">
+                                    <div class="col-md-4" style="width:50%">
+                                        <ul class="list-links">
+                                            <li>
+                                                <h3 class="list-links-title">Brand</h3>
+                                            </li>
+                                            @Html.Action("Catalog_Brand", "Bean", new { id = 2 })
+                                        </ul>
+                                        <hr>
+                                        <ul class="list-links">
+                                            <li>
+                                                <h3 class="list-links-title">Ranked</h3>
+                                            </li>
+                                            @Html.Action("Catalog_Ranked", "Bean", new { id = 2 })
+                                        </ul>
+                                        <hr class="hidden-md hidden-lg">
+                                    </div>
+                                    <div class="col-md-4" style="width:50%">
+                                        <a class="banner banner-2" href="@Url.Action("Items_Catalog", "Bean", new { id = 2})">
+                                            <img src="~/images/mensfashion-priv-closeup.jpg" />
+                                            <div class="banner-caption text-center">
+                                                <h3 class="white-color">VIEW ALL<br>Tablet</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="@Url.Action("Items_Catalog", "Bean", new { id = 3})">Gear</a></li>
+                        <li><a href="@Url.Action("About", "Bean" )">About</a></li>
+                        <li><a href="@Url.Action("Messenger", "Bean")">Contact</a></li>
                     </ul>
                 </div>
                 <!-- menu nav -->

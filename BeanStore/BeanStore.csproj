@@ -588,11 +588,9 @@
     <Content Include="Views\Cart\Cart.cshtml" />
     <Content Include="Views\Cart\CartPartial.cshtml" />
     <Content Include="Views\Cart\Order.cshtml" />
-    <Content Include="Views\Cart\Order_confirmation.cshtml" />
     <Content Include="Views\User\Account.cshtml" />
     <Content Include="Views\User\Register_Success.cshtml" />
     <Content Include="Views\Bean\About.cshtml" />
-    <Content Include="Views\Bean\Contact.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Items.cshtml" />
     <Content Include="Views\Admin\Create_Items.cshtml" />
@@ -626,6 +624,14 @@
     <Content Include="Views\Admin\Delete_order.cshtml" />
     <Content Include="Views\Admin\Account.cshtml" />
     <Content Include="Views\Admin\Function.cshtml" />
+    <Content Include="Views\Bean\Items_Catalog_Brand.cshtml" />
+    <Content Include="Views\Bean\Catalog_Brand.cshtml" />
+    <Content Include="Views\Bean\Catalog_Ranked.cshtml" />
+    <Content Include="Views\Bean\Blank_page.cshtml" />
+    <Content Include="Views\Bean\Items_Catalog_Ranked.cshtml" />
+    <Content Include="Views\Bean\Messenger.cshtml" />
+    <Content Include="Views\Admin\Messenger.cshtml" />
+    <Content Include="Views\Cart\Order_confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

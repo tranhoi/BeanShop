@@ -12,10 +12,6 @@ namespace BeanStore.Controllers
     public class AdminController : Controller
     {
         dbBeanDataContext data = new dbBeanDataContext();
-        public ActionResult Index()
-        {
-            return View();
-        }
         [HttpGet]
         public ActionResult Login()
         {
@@ -39,15 +35,15 @@ namespace BeanStore.Controllers
         public ActionResult Admin_Index()
         {
             admin adm = (admin)Session["AdminAccount"];
-            if (Session["AdminAccount"] != null)
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
             {
                 ViewBag.User_name = adm.name;
                 ViewBag.User_position = adm.position.name;
                 ViewBag.User_position_id = adm.position_id;
-            }
-            else
-            {
-                ViewBag.User_name = null;
             }
             return PartialView();
         }
@@ -564,6 +560,11 @@ namespace BeanStore.Controllers
             UpdateModel(ord);
             data.SubmitChanges();
             return RedirectToAction("Order", new { id = ord.status_id });
+        }
+        public ActionResult Messenger()
+        {
+            var mess = from messe in data.messeages select messe;
+            return PartialView(mess);
         }
     }
 }

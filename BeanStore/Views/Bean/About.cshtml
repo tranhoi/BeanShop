@@ -3,15 +3,79 @@
     ViewBag.Title = "About";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
+            <li><a href="javascript:history.back()">Category</a></li>
+            <li class="active">about</li>
+        </ul>
+    </div>
+</div>
+<!-- /BREADCRUMB -->
 <!-- section -->
 <div class="section">
     <!-- container -->
     <div class="container">
         <!-- row -->
         <div class="row">
-            <h2>--- since 1997 ---</h2>
+            <!--  Product Details -->
+            <div class="product product-details clearfix">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2 class="title">Welcome to Beanshop!</h2>
+                        <h5>
+                            <i class="icon-coffee icon-circled icon-32 active"></i> We create to bring you the best technology products - smartphones, tablets and geat!
+                        </h5>
+                    </div>
+                    <div class="product-tab">
+                        <ul class="tab-nav">
+                            <li class="active"><a data-toggle="tab" href="#tab1">Smartphone</a></li>
+                            <li><a data-toggle="tab" href="#tab2">Tablet</a></li>
+                            <li><a data-toggle="tab" href="#tab3">Gear</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane fade in active">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="span6">
+                                    <div class="centered">
+                                        <img src="~/images_banner/banner05.png" style="width:30%" />
+                                    </div>
+                                </div>
+                                <button class="primary-btn">@Html.ActionLink("Watch now", "Items_Catalog", new { id = 1 })</button>
+                            </div>
+                            <div id="tab2" class="tab-pane fade in">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="span6">
+                                    <div class="centered">
+                                        <img src="~/images_banner/banner04.png" style="width:30%" />
+                                    </div>
+                                </div>
+                                <button class="primary-btn">@Html.ActionLink("Watch now", "Items_Catalog", new { id = 2 })</button>
+                            </div>
+                            <div id="tab3" class="tab-pane fade in">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="span6">
+                                    <div class="centered">
+                                        <img src="~/images_banner/banner01.png" style="width:30%" />
+                                    </div>
+                                </div>
+                                <button class="primary-btn">@Html.ActionLink("Watch now", "Items_Catalog", new { id = 3 })</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Product Details -->
         </div>
-        <!-- row -->
+        <!-- /row -->
     </div>
     <!-- /container -->
 </div>

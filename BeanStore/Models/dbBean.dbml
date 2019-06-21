@@ -76,6 +76,14 @@
       <Association Name="ranked_item" Member="ranked" ThisKey="ranked_id" OtherKey="id" Type="ranked" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.messeage" Member="messeages">
+    <Type Name="messeage">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="message" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.[order]" Member="orders">
     <Type Name="order">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

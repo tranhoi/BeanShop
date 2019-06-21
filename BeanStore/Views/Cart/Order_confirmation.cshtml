@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Order_confirmation";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
@@ -16,21 +15,10 @@
                         <h2 class="title">Thank you!</h2>
                     </div>
                     <div class="product-tab">
-                        <ul class="tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">notification</a></li>
-                            <li><a data-toggle="tab" href="#tab2">continue shopping</a></li>
-                        </ul>
                         <div class="tab-content">
-                            <div id="tab1" class="tab-pane fade in active">
-                                <h4>
-                                    Your order has been noted by us. We will contact you as soon as possible and deliver on time.
-                                </h4>
-                            </div>
-                            <div id="tab2" class="tab-pane fade in">
-                                <div class="row">
-                                    <button class="primary-btn">@Html.ActionLink("Back to home", "Index", "Bean")</button>
-                                </div>
-                            </div>
+                            <h4>
+                                Your order has been noted by us. We will contact you as soon as possible and deliver on time. <a href="@Url.Action("Index", "Bean")"> Back to home?</a>
+                            </h4>
                         </div>
                     </div>
                 </div>
