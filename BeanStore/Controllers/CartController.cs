@@ -62,7 +62,7 @@ namespace BeanStore.Controllers
             List<Cart> lstCart = Session["Cart"] as List<Cart>;
             if (lstCart != null)
             {
-                cTotalPrice = lstCart.Sum(n => n.cAmount);
+                cTotalPrice = lstCart.Sum(n => n.cTotal_Price_Item);
             }
             return cTotalPrice;
         }
@@ -131,7 +131,7 @@ namespace BeanStore.Controllers
             user use = (user)Session["UserAccount"];
             List<Cart> cart = GetCart();
             ord.user_id = use.id;
-            ord.order_date = DateTime.Today;
+            ord.order_date = DateTime.Now;
             ord.status_id = 1;
             data.orders.InsertOnSubmit(ord);
             data.SubmitChanges();   

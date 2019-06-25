@@ -619,8 +619,6 @@
     <Content Include="Views\Admin\Edit_admin.cshtml" />
     <Content Include="Views\Admin\Details_order.cshtml" />
     <Content Include="Views\Admin\Det_Order.cshtml" />
-    <Content Include="Views\Admin\Status.cshtml" />
-    <Content Include="Views\Admin\Order.cshtml" />
     <Content Include="Views\Admin\Delete_order.cshtml" />
     <Content Include="Views\Admin\Account.cshtml" />
     <Content Include="Views\Admin\Function.cshtml" />
@@ -632,6 +630,10 @@
     <Content Include="Views\Bean\Messenger.cshtml" />
     <Content Include="Views\Admin\Messenger.cshtml" />
     <Content Include="Views\Cart\Order_confirmation.cshtml" />
+    <Content Include="Views\Bean\Search.cshtml" />
+    <Content Include="Views\Bean\Item_Search.cshtml" />
+    <Content Include="Views\Admin\Orders.cshtml" />
+    <Content Include="Views\Admin\Total_price.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

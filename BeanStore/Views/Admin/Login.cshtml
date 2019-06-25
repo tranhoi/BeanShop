@@ -1,5 +1,7 @@
 ﻿@{
-    Layout = null;
+                /**/
+
+                Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -37,13 +39,13 @@
                 <span class="login100-form-title p-b-41">
                     LOGIN
                 </span>
-                    @if (@ViewBag.Notification == "error")
-                    {
-                <div class="alert">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    Username or password is incorrect.
-                </div>
-                    }
+                @if (@ViewBag.Notification == "error")
+                {
+                    <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        Username or password is incorrect.
+                    </div>
+                }
                 @using (Html.BeginForm())
                 {
                     @Html.ValidationSummary(true)
@@ -87,6 +89,7 @@
             background-color: #f44336;
             color: white;
         }
+
         .closebtn {
             margin-left: 15px;
             color: white;
@@ -97,9 +100,10 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .closebtn:hover {
-            color: black;
-        }
+
+            .closebtn:hover {
+                color: black;
+            }
     </style>
 </body>
 </html>

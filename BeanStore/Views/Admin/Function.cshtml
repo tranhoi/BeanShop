@@ -1,8 +1,36 @@
 ﻿@if (ViewBag.User_position_id == 3)
 {
-        <li>
-            <a href="Banner"><i class="fa fa-desktop"></i> Banner </a>
-        </li>
+    <li>
+        <a href="Banner"><i class="fa fa-desktop"></i> Banner </a>
+    </li>
+    <li>
+        <a href="#"><i class="fa fa-sitemap"></i> Product <span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="Items">Product</a>
+            </li>
+            <li>
+                <a href="Brand">Brand</a>
+            </li>
+            <li>
+                <a href="Catalog">Catalog</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="Users"><i class="fa fa-table"></i> User </a>
+    </li>
+    <li>
+        <a href="Admins"><i class="fa fa-edit"></i> Admin </a>
+    </li>
+    <li>
+        <a href="Orders"><i class="fa fa-fw fa-file"></i> Order </a>
+    </li>
+}
+else
+{
+    if (ViewBag.User_position_id == 2)
+    {
         <li>
             <a href="#"><i class="fa fa-sitemap"></i> Product <span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
@@ -21,53 +49,16 @@
             <a href="Users"><i class="fa fa-table"></i> User </a>
         </li>
         <li>
-            <a href="Admins"><i class="fa fa-edit"></i> Admin </a>
+            <a href="Orders"><i class="fa fa-fw fa-file"></i> Order </a>
         </li>
-        <li>
-            <a href="#"><i class="fa fa-fw fa-file"></i> Order <span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-                @Html.Action("Status")
-            </ul>
-        </li>
-}
-else
-{
-    if (ViewBag.User_position_id == 2)
-    {
-            <li>
-                <a href="#"><i class="fa fa-sitemap"></i> Product <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="Items">Product</a>
-                    </li>
-                    <li>
-                        <a href="Brand">Brand</a>
-                    </li>
-                    <li>
-                        <a href="Catalog">Catalog</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="Users"><i class="fa fa-table"></i> User </a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-file"></i> Order <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    @Html.Action("Status")
-                </ul>
-            </li>
     }
     else
     {
-            <li>
-                <a href="Users"><i class="fa fa-table"></i> User </a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-file"></i> Order <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    @Html.Action("Status")
-                </ul>
-            </li>
+        <li>
+            <a href="Users"><i class="fa fa-table"></i> User </a>
+        </li>
+        <li>
+            <a href="Orders"><i class="fa fa-fw fa-file"></i> Order </a>
+        </li>
     }
 }

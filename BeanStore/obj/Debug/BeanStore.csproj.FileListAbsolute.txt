@@ -665,4 +665,3 @@ C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.csproj.CoreCompile
 C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.csproj.CopyComplete
 C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.dll
 C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.pdb
-C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.csprojAssemblyReference.cache

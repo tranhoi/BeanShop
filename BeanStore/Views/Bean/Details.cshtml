@@ -5,8 +5,6 @@
 @{
     int sale = @Model.sale;
     int price = @Model.price;
-    int discount = @Model.discount;
-    string name = @Model.name;
 }
 <!-- BREADCRUMB -->
 <div id="breadcrumb">
@@ -14,7 +12,7 @@
         <ul class="breadcrumb">
             <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
             <li><a href="javascript:history.back()">Category</a></li>
-            <li class="active">@name</li>
+            <li class="active">@Model.name</li>
         </ul>
     </div>
 </div>
@@ -49,15 +47,15 @@
                             <span>New</span>
                             @if (sale == 0)
                             {
-                                <h2 class="product-name">@name</h2>
+                                <h2 class="product-name">@Model.name</h2>
                                 <h3 class="product-price">$@price.00</h3>
                             }
                             @if (sale != 0)
                             {
                                 <span class="sale">-@sale%</span>
-                                <h2 class="product-name">@name</h2>
-                                int pricetotal = price - ((price / 100) * sale);
-                                <h3 class="product-price">$@pricetotal.00 <del class="product-old-price">$@price</del></h3>
+                                <h2 class="product-name">@Model.name</h2>
+                                int amount = price - ((price / 100) * sale);
+                                <h3 class="product-price">$@amount.00 <del class="product-old-price">$@price</del></h3>
                             }
                             <div>
                                 <div class="product-rating">
@@ -69,18 +67,22 @@
                                 </div>
                                 <a href="#">3 Review(s) / Add Review</a>
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
+                            @if (Model.description == null || Model.description == "")
+                            {
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            }
+                            else {@Model.description}
                             <div class="product-options">
                             </div>
                             <p><strong>Availability:</strong></p>
-                            @if (@discount == 0)
+                            @if (@Model.discount == 0)
                             {
                                 <p style="color:red">out of stock</p>
                             }
-                            @if (@discount != 0)
+                            @if (@Model.discount != 0)
                             {
                                 <p>in stock</p>
                             }

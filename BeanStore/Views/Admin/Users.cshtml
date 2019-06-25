@@ -3,6 +3,22 @@
     ViewBag.Title = "Users";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+@if (@ViewBag.Notification == "empty")
+{
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        The account you requested was not found.
+    </div>
+}
+@using (Html.BeginForm())
+{
+    <div>
+        <input type="text" name="txtKey" placeholder="Enter your keyword">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <p style="color:#FF6600; font-style:italic">(*) You can search by name or username.</p>
+    </div>
+}
+<hr />
 <h2>Users Managemen</h2>
 <hr />
 <table class="table">

@@ -2,9 +2,19 @@
 @using PagedList.Mvc;
 @model PagedList.PagedList<item>
 @{
-    ViewBag.Title = "Item_All";
+    ViewBag.Title = "Item_Seach";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
+            <li class="active">Seach key = "@ViewBag.key"</li>
+        </ul>
+    </div>
+</div>
+<!-- /BREADCRUMB -->
 <!-- section -->
 <div class="section">
     <!-- container -->
@@ -14,7 +24,11 @@
             <!-- section title -->
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2 class="title">Product</h2>
+                    @foreach (var items in Model)
+                    {
+                        <h2 class="title">Seach</h2>
+                        break;
+                    }
                 </div>
             </div>
             <!-- section title -->
@@ -31,7 +45,7 @@
                                     <span class="sale">-@items.sale%</span>
                                 }
                             </div>
-                            <a href="@Url.Action("Details", "Bean", new { id = items.id })">
+                            <a href="@Url.Action("Details", "Bean", new { id = items.id})">
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
                             </a>
                             <img alt="@items.name" src="/images_product/@items.image_link" height="280">
@@ -49,7 +63,7 @@
                             <div class="product-btns">
                                 <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                 <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                <a href="@Url.Action("AddCart", "Cart", new { @cId = items.id, @strURL = Request.Url.ToString() })">
+                                <a href="@Url.Action("AddCart", "Cart", new { @cId = @items.id, @strURL = Request.Url.ToString() })">
                                     <button onclick="alert('Added to cart')" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
                                 </a>
                             </div>
@@ -70,7 +84,7 @@
                     else
                     {
                         <p class="active">Page: @Model.PageNumber/@Model.PageCount</p>
-                        @Html.PagedListPager(Model, page => Url.Action("Item_All", new { page = page }))
+                        @Html.PagedListPager(Model, page => Url.Action("Item_Search", new { page = page }))
                     }
                 </ul>
             </div>

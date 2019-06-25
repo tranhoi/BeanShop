@@ -77,10 +77,7 @@
                     <!-- /Logo -->
                     <!-- Search -->
                     <div class="header-search" style="width: 60%">
-                        <form>
-                            <input class="input search-input" type="text" placeholder="Enter your keyword">
-                            <button class="search-btn"><i class="fa fa-search"></i></button>
-                        </form>
+                        @Html.Action("Search", "Bean")
                     </div>
                     <!-- /Search -->
                 </div>
@@ -208,12 +205,21 @@
     <div>
         @RenderBody()
     </div>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="488909728518807"
+         theme_color="#F8694A">
+    </div>
     <!-- /render body -->
     <!-- FOOTER -->
     <footer id="footer" class="section section-grey">
         <!-- container -->
         <div class="container">
             <hr>
+            <!-- fanpage-->
+            <div class="fb-page" data-href="https://www.facebook.com/Bean-Shop-488909728518807/" data-tabs="timeline" data-width="300" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Bean-Shop-488909728518807/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bean-Shop-488909728518807/">Bean Shop</a></blockquote></div>
+            <!-- / fanpage-->
             <!-- row -->
             <div class="col-md-8 col-sm-6 col-xs-6">
                 <!-- footer logo -->
@@ -252,6 +258,7 @@
     </footer>
     <!-- /FOOTER -->
     <!-- jQuery Plugins -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3"></script>
     <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
     <script src="~/Scripts/jquery.exzoom.js"></script>
     <script type="text/javascript">
@@ -282,6 +289,7 @@
     <script src="~/Scripts/nouislider.min.js"></script>
     <script src="~/Scripts/jquery.zoom.min.js"></script>
     <script src="~/Scripts/main.js"></script>
+
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
@@ -296,39 +304,8 @@
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <style>
-        .alert {
-            padding: 20px;
-            background-color: #F8694A;
-            color: white;
-        }
-
-        .closebtn {
-            margin-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-            .closebtn:hover {
-                color: black;
-            }
-    </style>
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat"
-         attribution=setup_tool
-         page_id="2354108234832687"
-         theme_color="#F8694A"
-         logged_in_greeting="Welcome to Beanshop! How can we help you?"
-         logged_out_greeting="Welcome to Beanshop! How can we help you?">
-    </div>
+        }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

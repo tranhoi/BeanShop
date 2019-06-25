@@ -75,23 +75,97 @@ namespace BeanStore.Controllers
             Session.Remove("AdminAccount");
             return RedirectToAction("Login", "Admin");
         }
-        public ActionResult Items(int? page)
+        public ActionResult Items(FormCollection collection, int? page)
         {
-            int pageNumber = (page ?? 1);
-            int pageSize = 8;
-            return View(data.items.ToList().OrderByDescending(n => n.id).ToPagedList(pageNumber, pageSize));
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                int pageNumber = (page ?? 1);
+                int pageSize = 8;
+                string key = collection["txtKey"];
+                ViewBag.key = key;
+                if (key == null || key == "")
+                {
+                    return View(data.items.ToList().OrderBy(n => n.created).ToPagedList(pageNumber, pageSize));
+                }
+                var item = from ite in data.items where ite.name.ToUpper().Contains(key.ToUpper()) || ite.brand.name.ToUpper().Contains(key.ToUpper()) || ite.catalog.name.ToUpper().Contains(key.ToUpper()) select ite;
+                if (item.Count() == 0)
+                {
+                    ViewBag.Notification = "empty";
+                    return View(data.items.ToList().OrderByDescending(n => n.created).ToPagedList(pageNumber, pageSize));
+                }
+                return View(item.OrderByDescending(n => n.created).ToPagedList(pageNumber, pageSize));
+            }
         }
-        public ActionResult Users(int? page)
+        public ActionResult Admins(FormCollection collection, int? page)
         {
-            int pageNumber = (page ?? 1);
-            int pageSize = 8;
-            return View(data.users.ToList().OrderByDescending(n => n.id).ToPagedList(pageNumber, pageSize));
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                int pageNumber = (page ?? 1);
+                int pageSize = 8;
+                string key = collection["txtKey"];
+                ViewBag.key = key;
+                if (key == null || key == "")
+                {
+                    return View(data.admins.ToList().ToPagedList(pageNumber, pageSize));
+                }
+                var admin = from adminss in data.admins where adminss.name.ToUpper().Contains(key.ToUpper()) || adminss.username.ToUpper().Contains(key.ToUpper()) || adminss.position.name.ToUpper().Contains(key.ToUpper()) select adminss;
+                if (admin.Count() == 0)
+                {
+                    ViewBag.Notification = "empty";
+                    return View(data.admins.ToList().OrderBy(n => n.id).ToPagedList(pageNumber, pageSize));
+                }
+                return View(admin.OrderBy(n => n.id).ToPagedList(pageNumber, pageSize));
+            }
+        }
+        public ActionResult Users(FormCollection collection, int? page)
+        {
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                int pageNumber = (page ?? 1);
+                int pageSize = 8;
+                string key = collection["txtKey"];
+                ViewBag.key = key;
+                if (key == null || key == "")
+                {
+                    return View(data.users.ToList().OrderBy(n => n.id).ToPagedList(pageNumber, pageSize));
+                }
+                var user = from use in data.users where use.name.ToUpper().Contains(key.ToUpper()) || use.email.ToUpper().Contains(key.ToUpper()) select use;
+                if (user.Count() == 0)
+                {
+                    ViewBag.Notification = "empty";
+                    return View(data.users.ToList().OrderBy(n => n.id).ToPagedList(pageNumber, pageSize));
+                }
+                return View(user.OrderBy(n => n.id).ToPagedList(pageNumber, pageSize));
+            }
         }
         [HttpGet]
         public ActionResult Created_admin()
         {
-            ViewBag.Position_id = new SelectList(data.positions.ToList().OrderBy(n => n.name), "id", "name");
-            return View();
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                ViewBag.Position_id = new SelectList(data.positions.ToList().OrderBy(n => n.name), "id", "name");
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult Created_admin(admin adm)
@@ -103,32 +177,70 @@ namespace BeanStore.Controllers
             }
             return RedirectToAction("Admins");
         }
-        public ActionResult Admins(int? page)
-        {
-            int pageNumber = (page ?? 1);
-            int pageSize = 8;
-            return View(data.admins.ToList().OrderByDescending(n => n.id).ToPagedList(pageNumber, pageSize));
-        }
         public ActionResult Banner()
         {
-            return View(data.banners.ToList().OrderByDescending(n => n.id));
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View(data.banners.ToList().OrderByDescending(n => n.id));
+            }
         }
-        public ActionResult Brand()
+        public ActionResult Brand(FormCollection collection)
         {
-            return View(data.brands.ToList().OrderBy(n => n.id));
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                string key = collection["txtKey"];
+                ViewBag.key = key;
+                if (key == null || key == "")
+                {
+                    return View(data.brands.ToList().OrderBy(n => n.id));
+                }
+                var brand = from bra in data.brands where bra.name.ToUpper().Contains(key.ToUpper()) select bra;
+                if (brand.Count() == 0)
+                {
+                    ViewBag.Notification = "empty";
+                    return View(data.brands.ToList().OrderBy(n => n.id));
+                }
+                return View(brand.OrderBy(n => n.id));
+            }
         }
         public ActionResult Catalog()
         {
-            return View(data.catalogs.ToList().OrderBy(n => n.id));
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View(data.catalogs.ToList().OrderBy(n => n.id));
+            }
         }
         [HttpGet]
         public ActionResult Create_Items()
         {
-            ViewBag.Brand_id = new SelectList(data.brands.ToList().OrderBy(n => n.name), "id", "name");
-            ViewBag.Catalog_id = new SelectList(data.catalogs.ToList().OrderBy(n => n.name), "id", "name");
-            ViewBag.Ranked_id = new SelectList(data.rankeds.ToList().OrderBy(n => n.name), "id", "name");
-            ViewBag.TimeNow = DateTime.Now;
-            return View();
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                ViewBag.Brand_id = new SelectList(data.brands.ToList().OrderBy(n => n.name), "id", "name");
+                ViewBag.Catalog_id = new SelectList(data.catalogs.ToList().OrderBy(n => n.name), "id", "name");
+                ViewBag.Ranked_id = new SelectList(data.rankeds.ToList().OrderBy(n => n.name), "id", "name");
+                ViewBag.TimeNow = DateTime.Now;
+                return View();
+            }
         }
         [HttpPost]
         [ValidateInput(false)]
@@ -188,14 +300,14 @@ namespace BeanStore.Controllers
         }
         public ActionResult Details_product(int id)
         {
-            item ite = data.items.SingleOrDefault(n => n.id == id);
-            ViewBag.id_items = ite.id;
-            if (ite == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            return View(ite);
+                item ite = data.items.SingleOrDefault(n => n.id == id);
+                ViewBag.id_items = ite.id;
+                if (ite == null)
+                {
+                    Response.StatusCode = 404;
+                    return null;
+                }
+                return View(ite);
         }
         [HttpGet]
         public ActionResult Delete_product(int id)
@@ -314,7 +426,15 @@ namespace BeanStore.Controllers
         [HttpGet]
         public ActionResult Inset_banner()
         {
-            return View();
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult Inset_banner(banner bann, HttpPostedFileBase bannerUpload)
@@ -382,7 +502,15 @@ namespace BeanStore.Controllers
         [HttpGet]
         public ActionResult Inset_brand()
         {
-            return View();
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult Inset_brand(brand bra, HttpPostedFileBase braUpload)
@@ -414,7 +542,15 @@ namespace BeanStore.Controllers
         [HttpGet]
         public ActionResult Inset_catalog()
         {
-            return View();
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult Inset_catalog(catalog cata)
@@ -480,91 +616,42 @@ namespace BeanStore.Controllers
             data.SubmitChanges();
             return RedirectToAction("Admins");
         }
-        public ActionResult Status()
-        {
-            var sta = from status in data.status select status;
-            return PartialView(sta);
-        }
-        public ActionResult Order(int? page, int id)
-        {
-            int pageNumber = (page ?? 1);
-            int pageSize = 8;
-            var ord = from order in data.orders
-                      where order.status_id == id
-                      select order;
-            return PartialView(ord.ToPagedList(pageNumber, pageSize));
-        }
-        public ActionResult Details_order(int id)
-        {
-            order ord = data.orders.SingleOrDefault(n => n.id == id);
-            if (ord == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            return View(ord);
-        }
-        public ActionResult Det_Order(int id)
-        {
-            var dtord = from dtorder in data.det_orders
-                        where dtorder.order_id == id
-                        select dtorder;
-            return PartialView(dtord);
-        }
-        [HttpGet]
-        public ActionResult Delete_order(int id)
-        {
-            order ord = data.orders.SingleOrDefault(n => n.id == id);
-            ViewBag.order_id = ord.id;
-            if (ord == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            return View(ord);
-        }
-        [HttpPost, ActionName("Delete_order")]
-        public ActionResult Confirm_deletion_order(int id)
-        {
-            order ord = data.orders.SingleOrDefault(n => n.id == id);
-            if (ord == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            data.orders.DeleteOnSubmit(ord);
-            data.SubmitChanges();
-            return RedirectToAction("Order", new { id = ord.status_id });
-        }
-        public ActionResult Delete_det_order(int id)
-        {
-            det_order detor = data.det_orders.SingleOrDefault(n => n.id == id);
-            if (detor == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            data.det_orders.DeleteOnSubmit(detor);
-            data.SubmitChanges();
-            return RedirectToAction("Details_order", new { id = detor.order_id });
-        }
-        public ActionResult Change_status(int id)
-        {
-            order ord = data.orders.SingleOrDefault(n => n.id == id);
-            if (ord == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            ord.status_id +=1;
-            UpdateModel(ord);
-            data.SubmitChanges();
-            return RedirectToAction("Order", new { id = ord.status_id });
-        }
         public ActionResult Messenger()
         {
             var mess = from messe in data.messeages select messe;
             return PartialView(mess);
+        }
+        public ActionResult Orders(FormCollection collection, int? page)
+        {
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                int pageNumber = (page ?? 1);
+                int pageSize = 8;
+                string key = collection["txtKey"];
+                ViewBag.key = key;
+                if (key == null || key == "")
+                {
+                    return View(data.orders.OrderByDescending(n => n.order_date).ToPagedList(pageNumber, pageSize));
+                }
+                var order = from ord in data.orders where ord.user.name.ToUpper().Contains(key.ToUpper()) select ord;
+                if (order.Count() == 0)
+                {
+                    ViewBag.Notification = "empty";
+                    return View(data.orders.ToList().OrderByDescending(n => n.order_date).ToPagedList(pageNumber, pageSize));
+                }
+                return View(order.OrderByDescending(n => n.order_date).ToPagedList(pageNumber, pageSize));
+            }
+        }
+        public ActionResult Total_price(int id)
+        {
+            int ? TotalPrice = data.det_orders.Where(or => or.order_id == id).Sum(od => (od.quantity * od.amount));
+            ViewBag.TotalPrice = TotalPrice;
+            return PartialView();
         }
     }
 }

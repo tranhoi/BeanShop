@@ -18,17 +18,22 @@ namespace BeanStore.Models
         public int cQuantity { set; get; }
         public Double cAmount
         {
-            get {
-                if(cSale != 0)
+            get
+            {
+                if (cSale != 0)
                 {
-                    return (cQuantity * cPrice) - ((cQuantity * cPrice) * (cSale/100));
+                    return cPrice - (cPrice * (cSale / 100));
                 }
-                else { return cQuantity * cPrice; }
+                else { return cPrice; }
             }
 
         }
+        public Double cTotal_Price_Item
+        {
+            get {return (cQuantity * cAmount);}
+        }
         //-------------
-        public Cart (int item_id)
+        public Cart(int item_id)
         {
             cId = item_id;
             item ite = data.items.Single(n => n.id == cId);

@@ -20,8 +20,7 @@
             @Html.DisplayFor(modelItem => item.name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit_catalog", new { id = item.id }) |
-            @Html.ActionLink("Delete", "Delete_catalog", new { id = item.id })
+            | @Html.ActionLink("Delete", "Delete_catalog", new { id = item.id })
         </td>
     </tr>
 }

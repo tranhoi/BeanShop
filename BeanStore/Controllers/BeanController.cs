@@ -69,7 +69,7 @@ namespace BeanStore.Controllers
         }
         public ActionResult Items_Brand(int id, int? page)
         {
-            int pageSize = 3;
+            int pageSize = 4;
             int pageNum = (page ?? 1);
 
             var item = from ite in data.items
@@ -167,6 +167,24 @@ namespace BeanStore.Controllers
         public ActionResult Order()
         {
             return View(data.orders.ToList().OrderByDescending(n => n.id));
+        }
+        public ActionResult Search()
+        {
+            return PartialView();
+        }
+        public ActionResult Item_Search(FormCollection collection, int? page)
+        {
+            int pageSize = 4;
+            int pageNum = (page ?? 1);
+
+            string key = collection["txtKey"];
+            ViewBag.key = key;
+            if (key == null)
+            {
+                return RedirectToAction("Index");
+            }
+            var item = from ite in data.items where ite.name.ToUpper().Contains(key.ToUpper()) select ite;
+            return View(item.ToPagedList(pageNum, pageSize));
         }
     }
 }
