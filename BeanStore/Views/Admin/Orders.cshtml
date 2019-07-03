@@ -1,7 +1,6 @@
 ﻿@using BeanStore.Models
 @using PagedList.Mvc;
 @model PagedList.PagedList<BeanStore.Models.order>
-
 @{
     ViewBag.Title = "Order";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -31,44 +30,67 @@
         <th style="width:200px">Order date</th>
         <th style="width:100px">Total price</th>
         <th style="width:200px">Delivery date</th>
-        <th style="width:200px">Status</th>
+        <th style="width:300px">Status</th>
         <th></th>
     </tr>
     @foreach (var item in Model)
     {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.user.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.order_date)
-        </td>
-        <td>
-            @Html.Action("Total_price", "Admin", new { id = item.id })
-        </td>
-        @if (item.delivery_date == null)
-        {
+        <tr>
             <td>
-                -------
+                @Html.DisplayFor(modelItem => item.id)
             </td>
-        }
-        else
-        {
             <td>
-                @Html.DisplayFor(modelItem => item.delivery_date)
+                @Html.DisplayFor(modelItem => item.user.name)
             </td>
-        }
-        <td>
-            @Html.DisplayFor(modelItem => item.status.name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.id })
-        </td>
-    </tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_date)
+            </td>
+            <td>
+                @Html.Action("Total_price", "Admin", new { id = item.id })
+            </td>
+            @if (item.delivery_date == null)
+            {
+                <td>
+                    -------
+                </td>
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.delivery_date)
+                </td>
+            }
+            @if (item.status_id == 1)
+            {
+                <td style="color:#FF6600">
+                    @Html.DisplayFor(modelItem => item.status.name)
+                    | @Html.ActionLink("Shipped", "Change_shipped", new { id = item.id })
+                    | @Html.ActionLink("Delivered", "Change_delivered", new { id = item.id })
+                </td>
+            }
+            else
+            {
+                if (item.status_id == 2)
+                {
+                    <td style="color:#FF6600">
+                        @Html.ActionLink("Processed", "Change_processed", new { id = item.id })
+                        | @Html.DisplayFor(modelItem => item.status.name)
+                        | @Html.ActionLink("Delivered", "Change_delivered", new { id = item.id })
+                    </td>
+                }
+                else
+                {
+                    <td style="color:#FF6600">
+                        @Html.ActionLink("Processed", "Change_processed", new { id = item.id })
+                        | @Html.ActionLink("Shipped", "Change_shipped", new { id = item.id })
+                        | @Html.DisplayFor(modelItem => item.status.name)
+                    </td>
+                }
+            }
+            <td>
+                @Html.ActionLink("Details", "Details_order", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete_order", new { id = item.id })
+            </td>
+        </tr>
     }
 </table>

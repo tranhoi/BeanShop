@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Forgot_pass";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 <!-- BREADCRUMB -->
@@ -7,11 +7,13 @@
     <div class="container">
         <ul class="breadcrumb">
             <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
-            <li class="active">Login</li>
+            <li><a href="@Url.Action("MyAccount", "User")">Your account</a></li>
+            <li class="active">Forget password</li>
         </ul>
     </div>
 </div>
 <!-- /BREADCRUMB -->
+<!-- section -->
 <div class="section">
     <!-- container -->
     <div class="container">
@@ -19,41 +21,44 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="billing-details">
-                    @if (ViewBag.Notification != null)
+                    @if (ViewBag.Notification == 0)
                     {
-                        <div class="alert">
-                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                            <strong>Error!</strong> @ViewBag.Notification.
-                        </div>
+                    <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        Email does not exist !!!
+                    </div>
                     }
-                    <p>Do not have an account ? <a href="@Url.Action("Register", "User")">Create an account</a></p>
+                    @if (ViewBag.Notification == 1)
+                    {
+                        <div class="alert2">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            "Changed your password.  "
+                            <a style="color:darkgoldenrod" href="@Url.Action("Login")">Re-login</a>
+                        </div>
+                        <div></div>
+                    }
                     <div class="section-title">
-                        <h3 class="title">Your Information</h3>
+                        <h3 class="title">Forgot password</h3>
                     </div>
                     @using (Html.BeginForm())
                     {
                         @Html.AntiForgeryToken()
                         <div class="form-horizontal">
                             <hr />
-                            @Html.ValidationSummary(true, "sdfds", new { @class = "text-danger" })
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    <input class="input" type="text" name="Email" placeholder="Email (*)" required>
+                                    <input class="input" type="text" name="email" placeholder="Your email" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    <input class="input" type="password" name="Pass" maxlength="8" placeholder="Password (*)" required>
+                                    <input class="input" type="password" name="password" placeholder="New password" required>
                                 </div>
                             </div>
                         </div>
                         <hr />
-                        <p>(*): Can't be null or empty</p>
-                        <hr />
-                        <a href="@Url.Action("Forgot_pass", "User")">Forgot password ?</a>
-                        <hr />
-                        <div class="product-btns">
-                            <input type="submit" value="Login" class="primary-btn" />
+                        <div class="pull-left">
+                            <input type="submit" value="Change" class="primary-btn" />
                         </div>
                     }
                 </div>
@@ -63,3 +68,4 @@
     </div>
     <!-- /container -->
 </div>
+<!-- /section -->

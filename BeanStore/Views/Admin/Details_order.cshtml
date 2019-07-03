@@ -1,43 +1,52 @@
-﻿@model BeanStore.Models.order
-
+﻿@model IEnumerable<BeanStore.Models.det_order>
 @{
-    ViewBag.Title = "Details_order";
+    ViewBag.Title = "Details_Order";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h2>Details Order</h2>
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Status:
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.status.name)
-        </dd>
-        <dt>
-            User:
-        <dd>
-            @Html.DisplayFor(model => model.user.name)
-        </dd>
-        <dt>
-            Order date:
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.order_date)
-        </dd>
-        @if (Model.status_id == 3)
-        {
-            <dt>
-                @Html.DisplayNameFor(model => model.delivery_date)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.delivery_date)
-            </dd>
-        }
-        @Html.Action("Det_Order", new { id = Model.id })
-    </dl>
-</div>
+<h2>Order details @ViewBag.order_id</h2>
+<hr />
+<!--
 <p>
-    @Html.ActionLink("Back to List", "Order", new { id = Model.status_id })
+    Html.ActionLink("Add new to this order", "Create_details_orders", new { id = ViewBag.order_id })
 </p>
+-->
+<table class="table">
+    @if (ViewBag.Notification == "none")
+    {
+        <p>This order is empty</p>
+        @Html.ActionLink("Do you want to delete it?", "Delete_order", new { id = ViewBag.order_id })
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <th style="width:400px">Item</th>
+                <th style="width:300px">Quantity</th>
+                <th style="width:100px">Amount</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.item.name)
+                </td>
+                @using (Html.BeginForm("Update_det_order", "Admin", new { @id = item.id }))
+                {
+                    <td>
+                        <input style="height: 25px; width:30%; padding-top:2px" type="number" min="1" name="txtQuantity" value="@item.quantity">
+                        <input class="text-right" type="submit" style="border: none" value="Change">
+                    </td>
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.amount)
+                </td>
+                <td>
+                    | @Html.ActionLink("Delete", "Delete_detorder", new { id = item.id })
+                </td>
+            </tr>
+        }
+    }
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Orders")
+</div>

@@ -10,7 +10,7 @@
     <div class="container">
         <ul class="breadcrumb">
             <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
-            <li class="active">Seach key = "@ViewBag.key"</li>
+            <li class="active">Seach "@ViewBag.key"</li>
         </ul>
     </div>
 </div>
@@ -31,6 +31,17 @@
                     }
                 </div>
             </div>
+            @if (ViewBag.Notification == 0)
+            {
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2 class="title">Search has no results</h2>
+                        <h4>
+                            <i class="icon-coffee icon-circled icon-32 active"></i> Sorry, we were unable to find results that match your search
+                        </h4>
+                    </div>
+                </div>
+            }
             <!-- section title -->
             @foreach (var items in Model)
             {

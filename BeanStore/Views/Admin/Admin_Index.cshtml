@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Admin_Index";
+    ViewBag.Title = "Admin";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 <h2>Admin Page</h2>
@@ -12,19 +12,19 @@
 {
     <ul>
         <li>
-            <a>Banner management</a>
+            <a href="Items">Product management</a>
         </li>
         <li>
-            <a>Product management</a>
+            <a href="Users">Customer management</a>
         </li>
         <li>
-            <a>Customer management</a>
+            <a href="Orders">Order management</a>
         </li>
         <li>
-            <a>Admin management</a>
+            <a href="Banner">Banner management</a>
         </li>
         <li>
-            <a>Order management</a>
+            <a href="Admins">Admin management</a>
         </li>
     </ul>
 }
@@ -34,13 +34,16 @@ else
     {
         <ul>
             <li>
-                <a>Product management</a>
+                <a href="Items">Product management</a>
             </li>
             <li>
-                <a>Customer management</a>
+                <a href="Users">Customer management</a>
             </li>
             <li>
-                <a>Order management</a>
+                <a href="Orders">Order management</a>
+            </li>
+            <li>
+                <a href="Banner">Banner management</a>
             </li>
         </ul>
     }
@@ -48,10 +51,13 @@ else
     {
         <ul>
             <li>
-                <a>Customer management</a>
+                <a href="Items">Product management</a>
             </li>
             <li>
-                <a>Order management</a>
+                <a href="Users">Customer management</a>
+            </li>
+            <li>
+                <a href="Orders">Order management</a>
             </li>
         </ul>
     }

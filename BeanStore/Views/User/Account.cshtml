@@ -23,6 +23,10 @@ else
             </div>
             <strong class="text-uppercase"> @ViewBag.User_name </strong>
         </div>
+        <ul class="custom-menu">
+            <li><a href="@Url.Action("MyAccount", "User")"><i class="fa fa-address-card"></i>Your Account</a></li>
+            <li><a href="@Url.Action("Logout", "User")"><i class="fa fas fa-angle-double-left"></i>Logout</a></li>
+        </ul>
         <a href="@Url.Action("Logout", "User")" class="text-uppercase">Logout</a>
     </li>
 }

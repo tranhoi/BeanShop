@@ -32,6 +32,11 @@ namespace BeanStore.Controllers
                 ViewBag.Notification = "error";
             return View();
         }
+        public ActionResult Logout()
+        {
+            Session.Remove("AdminAccount");
+            return RedirectToAction("Login", "Admin");
+        }
         public ActionResult Admin_Index()
         {
             admin adm = (admin)Session["AdminAccount"];
@@ -69,11 +74,6 @@ namespace BeanStore.Controllers
                 ViewBag.User_position_id = adm.position_id;
             }
             return PartialView();
-        }
-        public ActionResult Logout()
-        {
-            Session.Remove("AdminAccount");
-            return RedirectToAction("Login", "Admin");
         }
         public ActionResult Items(FormCollection collection, int? page)
         {
@@ -300,14 +300,14 @@ namespace BeanStore.Controllers
         }
         public ActionResult Details_product(int id)
         {
-                item ite = data.items.SingleOrDefault(n => n.id == id);
-                ViewBag.id_items = ite.id;
-                if (ite == null)
-                {
-                    Response.StatusCode = 404;
-                    return null;
-                }
-                return View(ite);
+            item ite = data.items.SingleOrDefault(n => n.id == id);
+            ViewBag.id_items = ite.id;
+            if (ite == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ite);
         }
         [HttpGet]
         public ActionResult Delete_product(int id)
@@ -621,6 +621,12 @@ namespace BeanStore.Controllers
             var mess = from messe in data.messeages select messe;
             return PartialView(mess);
         }
+        public ActionResult Total_price(int id)
+        {
+            int? TotalPrice = data.det_orders.Where(or => or.order_id == id).Sum(od => (od.quantity * od.amount));
+            ViewBag.TotalPrice = TotalPrice;
+            return PartialView();
+        }
         public ActionResult Orders(FormCollection collection, int? page)
         {
             admin adm = (admin)Session["AdminAccount"];
@@ -647,11 +653,190 @@ namespace BeanStore.Controllers
                 return View(order.OrderByDescending(n => n.order_date).ToPagedList(pageNumber, pageSize));
             }
         }
-        public ActionResult Total_price(int id)
+        [HttpGet]
+        public ActionResult Change_processed(int id)
         {
-            int ? TotalPrice = data.det_orders.Where(or => or.order_id == id).Sum(od => (od.quantity * od.amount));
-            ViewBag.TotalPrice = TotalPrice;
-            return PartialView();
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ord);
         }
+        [HttpPost, ActionName("Change_processed")]
+        public ActionResult Confirm_change_processed(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ord.status_id = 1;
+            ord.delivery_date = null;
+            UpdateModel(ord);
+            data.SubmitChanges();
+            return RedirectToAction("Orders");
+        }
+        [HttpGet]
+        public ActionResult Change_shipped(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ord);
+        }
+        [HttpPost, ActionName("Change_shipped")]
+        public ActionResult Confirm_change_shipped(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ord.status_id = 2;
+            ord.delivery_date = null;
+            UpdateModel(ord);
+            data.SubmitChanges();
+            return RedirectToAction("Orders");
+        }
+        [HttpGet]
+        public ActionResult Change_delivered(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ord);
+        }
+        [HttpPost, ActionName("Change_delivered")]
+        public ActionResult Confirm_change_delivered(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ord.status_id = 3;
+            ord.delivery_date = DateTime.Today;
+            UpdateModel(ord);
+            data.SubmitChanges();
+            return RedirectToAction("Orders");
+        }
+        [HttpGet]
+        public ActionResult Delete_order(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            ViewBag.order_id = ord.id;
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ord);
+        }
+        [HttpPost, ActionName("Delete_order")]
+        public ActionResult Confirm_deletion_order(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            det_order detor = data.det_orders.FirstOrDefault(n => n.order_id == id);
+            if (detor != null)
+            {
+                ViewBag.Notification = "You must delete all order details before deleting the order";
+                return this.Delete_order(ord.id);
+            }
+            data.orders.DeleteOnSubmit(ord);
+            data.SubmitChanges();
+            return RedirectToAction("Orders");
+        }
+        public ActionResult Details_Order(int id)
+        {
+            var detord = from det_orders in data.det_orders
+                         where det_orders.order_id == id
+                         select det_orders;
+            if (detord.Count() == 0)
+            {
+                ViewBag.order_id = id;
+                ViewBag.Notification = "none";
+                return View();
+            }
+            ViewBag.order_id = id;
+            return View(detord);
+        }
+        public ActionResult Update_det_order(int id, FormCollection collection)
+        {
+            det_order detor = data.det_orders.SingleOrDefault(n => n.id == id);
+            if (detor != null)
+            {
+                detor.quantity = int.Parse(collection["txtQuantity"].ToString());
+                UpdateModel(detor);
+                data.SubmitChanges();
+            }
+            return RedirectToAction("Details_Order", new { id = detor.order_id });
+        }
+        [HttpGet]
+        public ActionResult Delete_detorder(int id)
+        {
+            det_order detor = data.det_orders.SingleOrDefault(n => n.id == id);
+            if (detor == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ViewBag.detor_id = detor.id;
+            return View(detor);
+        }
+
+        [HttpPost, ActionName("Delete_detorder")]
+        public ActionResult Confirm_deletion_detorder(int id)
+        {
+            det_order detor = data.det_orders.SingleOrDefault(n => n.id == id);
+            if (detor == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            data.det_orders.DeleteOnSubmit(detor);
+            data.SubmitChanges();
+            return RedirectToAction("Details_Order", new { id = detor.order_id });
+        }
+        /*[HttpGet]
+        public ActionResult Create_details_order(int id)
+        {
+            admin adm = (admin)Session["AdminAccount"];
+            if (Session["AdminAccount"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                ViewBag.Product_id = new SelectList(data.items.ToList().OrderBy(n => n.name), "id", "name");
+                ViewBag.order_id = id;
+                return View();
+            }
+        }
+        [HttpPost]
+        public ActionResult Create_details_order(det_order detor)
+        {
+            if (ModelState.IsValid)
+            {
+                data.det_orders.InsertOnSubmit(detor);
+                data.SubmitChanges();
+            }
+            return RedirectToAction("Details_Order", new { id = detor.order_id });
+        }*/
     }
 }

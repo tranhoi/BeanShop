@@ -192,7 +192,7 @@
                         </li>
                         <li><a href="@Url.Action("Items_Catalog", "Bean", new { id = 3})">Gear</a></li>
                         <li><a href="@Url.Action("About", "Bean" )">About</a></li>
-                        <li><a href="@Url.Action("Messenger", "Bean")">Contact</a></li>
+                        <li><a href="@Url.Action("Contact", "Bean")">Contact</a></li>
                     </ul>
                 </div>
                 <!-- menu nav -->
@@ -232,7 +232,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                 <!-- footer social -->
                 <ul class="footer-social">
-                    <li><a href="https://www.facebook.com/hois.trann"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/Bean-Shop-488909728518807"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCBfwswJEpRVGE8jW-JXuWYQ?view_as=subscriber"><i class="fa fa-youtube-play"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -306,6 +306,35 @@
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #F8694A;
+            color: white;
+        }
+
+        .alert2 {
+            padding: 20px;
+            background-color: darkslategrey;
+            color: white;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .closebtn:hover {
+                color: black;
+            }
+    </style>
 </body>
 </html>

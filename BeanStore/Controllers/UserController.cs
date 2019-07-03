@@ -83,6 +83,135 @@ namespace BeanStore.Controllers
             }
             return PartialView();
         }
+        public ActionResult MyAccount()
+        {
+            user users = (user)Session["UserAccount"];
+            user use = data.users.SingleOrDefault(n => n.id == users.id);
+            return View(use);
+        }
+        public ActionResult Total_price(int id)
+        {
+            int? TotalPrice = data.det_orders.Where(or => or.order_id == id).Sum(od => (od.quantity * od.amount));
+            ViewBag.TotalPrice = TotalPrice;
+            return PartialView();
+        }
+        public PartialViewResult Order()
+        {
+            user users = (user)Session["UserAccount"];
+            var ord = from orders in data.orders
+                      where orders.user_id == users.id
+                      select orders;
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            //return data.orders.OrderByDescending(a => a.order_date).Where(or => or.user_id == users.id).ToList();
+            return PartialView(ord);
+        }
+        public PartialViewResult DetOrderPart(int id)
+        {
+            var detor = from detord in data.det_orders
+                        where detord.order_id == id
+                        select detord;
+            return PartialView(detor);
+        }
+        public ActionResult Det_Order(int id)
+        {
+            order ord = data.orders.SingleOrDefault(n => n.id == id);
+            if (ord == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(ord);
+        }
+        public PartialViewResult Det_Orders(int id)
+        {
+            var detor = from detord in data.det_orders
+                        where detord.order_id == id
+                        select detord;
+            return PartialView(detor);
+        }
+        [HttpGet]
+        public ActionResult Edit_user(int id)
+        {
+            user use = data.users.SingleOrDefault(n => n.id == id);
+            if (use == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(use);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Edit_user(user users, FormCollection collection)
+        {
+            user use = data.users.First(n => n.id == users.id);
+            if (ModelState.IsValid)
+            {
+                use.name = collection["name"];
+                UpdateModel(use);
+                data.SubmitChanges();
+                ViewBag.Notification = "Updated your information";
+                return RedirectToAction("MyAccount");
+            }
+            return this.Edit_user(use.id);
+        }
+        [HttpGet]
+        public ActionResult Change_pass()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Change_pass(FormCollection collection)
+        {
+            if (Session["UserAccount"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+            user users = (user)Session["UserAccount"];
+            user use = data.users.SingleOrDefault(n => n.id == users.id);
+            var pass1 = use.password;
+            var pass2 = collection["old_password"];
+            var pass3 = collection["new_password"];
+            if (Equals(pass1, pass2) == true)
+            {
+                use.password = pass3;
+                UpdateModel(use);
+                data.SubmitChanges();
+                ViewBag.Notification = 1;
+                Session.Remove("UserAccount");
+                return this.Change_pass();
+            }
+            ViewBag.Notification = 0;
+            return this.Change_pass();
+        }
+        [HttpGet]
+        public ActionResult Forgot_pass()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Forgot_pass(FormCollection collection)
+        {
+            var email = collection["email"];
+            user use = data.users.SingleOrDefault(n => n.email == email);
+            if (use == null)
+            {
+                ViewBag.Notification = 0;
+                return this.Forgot_pass();
+            }
+            use.password = collection["password"];
+            UpdateModel(use);
+            data.SubmitChanges();
+            ViewBag.Notification = 1;
+            Session.Remove("UserAccount");
+            return this.Forgot_pass();
+        }
         public ActionResult Logout()
         {
             Session.Remove("UserAccount");

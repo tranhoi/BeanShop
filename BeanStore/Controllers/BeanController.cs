@@ -99,10 +99,6 @@ namespace BeanStore.Controllers
         {
             return View();
         }
-        public ActionResult Contact()
-        {
-            return View();
-        }
         public ActionResult Items_Catalog_Brand(int cid, int bid, int? page)
         {
             int pageSize = 8;
@@ -150,19 +146,19 @@ namespace BeanStore.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Messenger()
+        public ActionResult Contact()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Messenger(messeage mess)
+        public ActionResult Contact(messeage mess)
         {
             if (ModelState.IsValid)
             {
                 data.messeages.InsertOnSubmit(mess);
                 data.SubmitChanges();
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Contact");
         }
         public ActionResult Order()
         {
@@ -183,7 +179,12 @@ namespace BeanStore.Controllers
             {
                 return RedirectToAction("Index");
             }
-            var item = from ite in data.items where ite.name.ToUpper().Contains(key.ToUpper()) select ite;
+            var item = from ite in data.items where ite.name.ToUpper().Contains(key.ToUpper()) || ite.catalog.name.ToUpper().Contains(key.ToUpper()) || ite.brand.name.ToUpper().Contains(key.ToUpper()) select ite;
+            if (item.Count() ==  0)
+            {
+                ViewBag.Notification = 0;
+                return View(item.ToPagedList(pageNum, pageSize));
+            }
             return View(item.ToPagedList(pageNum, pageSize));
         }
     }

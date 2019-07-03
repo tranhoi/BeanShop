@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BeanStore.Models.order>
+<div class="row">
+    <div class="col-md-12">
+        <div class="order-summary clearfix">
+            <div class="section-title">
+                <h3 class="title">Your Order</h3>
+            </div>
+            <table class="shopping-cart-table table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%" class="text-center">Id</th>
+                        <th style="width: 25%" class="details">Order day</th>
+                        <th style="width: 30%" class="text-center">Product</th>
+                        <th style="width: 10%" class="text-center">Total</th>
+                        <th style="width: 15%" class="text-center">Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td class="text-center">ord - @item.id</td>
+                        <td class="details">@item.order_date</td>
+                        <td class="thumb">
+                            @Html.Action("DetOrderPart", "User", new { id = item.id })
+                        </td>
+                        <td class="price text-center">
+                            <strong>$@Html.Action("Total_price", "User", new { id = item.id })</strong>
+                        </td>
+                        <td class="text-center">@item.status.name</td>
+                        <td>@Html.ActionLink("Manager", "Det_Order", new { id = item.id })</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

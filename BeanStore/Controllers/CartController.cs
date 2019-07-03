@@ -134,7 +134,7 @@ namespace BeanStore.Controllers
             ord.order_date = DateTime.Now;
             ord.status_id = 1;
             data.orders.InsertOnSubmit(ord);
-            data.SubmitChanges();   
+            data.SubmitChanges();
             foreach (var item in cart)
             {
                 det_order d_ord = new det_order();
@@ -149,6 +149,10 @@ namespace BeanStore.Controllers
             return RedirectToAction("Order_confirmation", "Cart");
         }
         public ActionResult Order_confirmation()
+        {
+            return View();
+        }
+        public ActionResult MyAccount()
         {
             return View();
         }

@@ -1,0 +1,52 @@
+﻿@model BeanStore.Models.user
+@{
+    ViewBag.Title = "Edit_user";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
+            <li><a href="@Url.Action("MyAccount", "User")">Your account</a></li>
+            <li class="active">Edit</li>
+        </ul>
+    </div>
+</div>
+<!-- /BREADCRUMB -->
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="billing-details">
+                    <div class="section-title">
+                        <h3 class="title">Your old password</h3>
+                    </div>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-horizontal">
+                            <hr />
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    <input class="input" type="password" name="password" required>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="pull-left">
+                            <input onclick="alert('Changed your password')" type="submit" value="Change" class="primary-btn" />
+                            <button class="primary-btn">@Html.ActionLink("Cancel", "MyAccount")</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

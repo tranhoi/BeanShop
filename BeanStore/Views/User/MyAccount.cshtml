@@ -1,0 +1,54 @@
+﻿@model BeanStore.Models.user
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Bean")">Home</a></li>
+            <li class="active">Your Account</li>
+        </ul>
+    </div>
+</div>
+<!-- /BREADCRUMB -->
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div id="contact-page" class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="contact-info">
+                    <h2 class="title text-center">information</h2>
+                    <address>
+                        <strong style="font-size:large">@Model.name</strong>
+                        <p>Email:</p>
+                        <p style="color:#F8694A">--- @Model.email</p>
+                    </address>
+                </div>
+                <div class="pull-left">
+                    <button class="primary-btn">@Html.ActionLink("Edit Your Information", "Edit_user", new { id = Model.id })</button>
+                    <button class="primary-btn">@Html.ActionLink("Change Password", "Change_pass", new { id = Model.id })</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="contact-info">
+                    <h2 class="title text-center">address</h2>
+                    <address>
+                        <p>Address:</p>
+                        <p style="color:#F8694A">--- @Model.address</p>
+                        <p>Number Phone:</p>
+                        <p style="color:#F8694A">--- @Model.phone</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- /row -->
+        @Html.Action("Order", "User")
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

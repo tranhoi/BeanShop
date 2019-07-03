@@ -1,0 +1,49 @@
+﻿@model BeanStore.Models.order
+@{
+    ViewBag.Title = "Det_Order";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order-summary clearfix">
+                    <div class="section-title">
+                        <h3 class="title">Oder Manager</h3>
+                    </div>
+                    <table class="shopping-cart-table table">
+                        <tfoot>
+                            <tr>
+                                <th>Order date</th>
+                                <th style="color:#F8694A">@Model.order_date</th>
+                            </tr>
+                            <tr>
+                                <th>Total price</th>
+                                <th style="color:#F8694A">$@Html.Action("Total_price", "User", new { id = Model.id })</th>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <th style="color:#F8694A">@Model.status.name</th>
+                            </tr>
+                        </tfoot>
+                        @Html.Action("Det_Orders", "User", new { id = Model.id })
+                    </table>
+                    <div class="pull-right">
+                        @if (Model.status_id == 1)
+                        {
+                            <button class="primary-btn">Cancel order</button>
+                        }
+                        <button class="primary-btn">@Html.ActionLink("Come back", "MyAccount")</button>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

@@ -1,0 +1,5 @@
+﻿@model IEnumerable<BeanStore.Models.det_order>
+@foreach (var item in Model)
+{
+    <img src="~/images_product/@item.item.image_link" />
+}
