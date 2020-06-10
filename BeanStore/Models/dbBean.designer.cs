@@ -69,7 +69,7 @@ namespace BeanStore.Models
     #endregion
 		
 		public dbBeanDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BeanStoreConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BeanStoreConnectionString4"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

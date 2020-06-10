@@ -405,7 +405,6 @@ C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Securit
 C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.dll
 C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.pdb
-C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.csprojResolveAssemblyReference.cache
 C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\ApplicationInsights.config
 C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\csc.exe
 C:\Users\tranh\Desktop\Beanstore\BeanStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -665,3 +664,10 @@ C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.csproj.CoreCompile
 C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.csproj.CopyComplete
 C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.dll
 C:\Users\tranh\Desktop\BeanShop\BeanStore\obj\Debug\BeanStore.pdb
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\PagedList.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\PagedList.Mvc.dll
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\PagedList.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\bin\PagedList.Mvc.xml
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.csprojAssemblyReference.cache
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.csproj.CoreCompileInputs.cache
+C:\Users\tranh\OneDrive\Máy tính\BeanShop\BeanStore\obj\Debug\BeanStore.csproj.CopyComplete
